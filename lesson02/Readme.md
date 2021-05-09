@@ -2,7 +2,7 @@
 
 Hay muchas formas de utilizar React para nuestros desarrollos, la forma más simple y básica de hacerlo es simplemente utilizando archivos estáticos, tus viejos amigos HTML, CSS y Javascript.
 
-## Primeros Pasos
+## 🐾 Primeros Pasos
 
 Para esta lección veremos como crear una aplicación estática con React desde cero, para esto necesitaremos la terminal y un editor de texto de tu elección.
 

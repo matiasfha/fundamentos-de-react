@@ -10,7 +10,7 @@ Un componente expone una API que le permite comunicarse con el mundo exterior, e
 
 React ofrece una API para crear un componente que permite trabajar de forma declarativa siendo la librería quien se hace cargo de comunicarse con la imperativa API del DOM. Esto es el VirtualDOM.
 
-## Pensando en React
+## 🐾 Pensando en React
 
 Pensar en React es implementar un nuevo modelo mental que te permite rápidamente visualizar y definir componentes en una interfaz para así planificar la arquitectura de los mismos y ser capaz rápidamente de encontrar unidades lógicas que pueden ser reutilizadas y compartidas.
 

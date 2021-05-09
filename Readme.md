@@ -1,12 +1,12 @@
-# Welcome
+# 🎉 Welcome
 
-# React desde cero: un viaje por los fundamentos de React
+## 🚌 React desde cero: un viaje por los fundamentos de React
 
 - Demo app:
 
 En este workshop aprenderás los diferentes conceptos base que fundamentan el cómo y por qué de ciertas prácticas en React. Revisaremos que necesidad viene a cubrir, desde donde nace su API, el uso de JSX, como manejar estilos, eventos y estado de un componente
 
-## Resumen del Workshop
+## 👨🏻‍💻 Resumen del Workshop
 
 Ok. ¿listo y ansioso de aprender?, genial, este será un viaje divertido y lleno de desafíos. Algunas de las cosas que podrás aprender serán:
 
@@ -38,7 +38,7 @@ Me encanta lo que hago y trato de traer la misma pasión a la creación de conte
 
 Puedes encontrarme en twitter como [@matiasfha](https://twitter.com/matiasfha)
 
-## Antes del workshop
+## ⏰ Antes del workshop
 
 ¿Que necesitas saber para iniciar tu camino con React?
 
@@ -57,7 +57,7 @@ Te invito a revisar tus conocimientos en esas áreas para que puedas sacar el m�
 
 Puedes revisar mi newsletter [Microbytes](https://microbytes.dev) y unirte al curso Javascript para React.
 
-## Sobre el workshop
+## 📝 Sobre el workshop
 
 ### Estructura de las lecciones
 
@@ -67,6 +67,6 @@ En cada directorio encontrarás un nuevo archivo Readme.md, en el encontrarás u
 
 ### Listado de lecciones
 
-- 00 - Introducción
-- 01 - Componentes
-- 02 - Creando una app estática base 
+- [00 - Introducción](./lesson00)
+- [01 - Componentes](./lesson01)
+- [02 - Creando una app estática base ](./lesson02)
