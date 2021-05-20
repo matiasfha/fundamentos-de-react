@@ -6,7 +6,7 @@ Al trabajar con React tendremos que tomar varias decisiones ya que la librería 
 
 **¿Qué necesitas para comenzar?**
 
-## 🐾 Primeros Pasos
+## Primeros Pasos
 
 Antes de iniciar la primera lección en profundidad, revisemos los contenidos básicos y cuál es el proceso y resultado esperado de este workshop.
 
@@ -23,4 +23,4 @@ Antes de iniciar la primera lección en profundidad, revisemos los contenidos b�
 
 Revisemos algunos artículos que nos ayudaran a preparar los conceptos base que usaremos en el curso
 
-(Listado de artículos sobre javascript moderno)
+- [ ] (Listado de artículos sobre javascript moderno)

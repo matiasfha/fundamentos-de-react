@@ -10,13 +10,13 @@ Un componente expone una API que le permite comunicarse con el mundo exterior, e
 
 React ofrece una API para crear un componente que permite trabajar de forma declarativa siendo la librería quien se hace cargo de comunicarse con la imperativa API del DOM. Esto es el VirtualDOM.
 
-## 🐾 Pensando en React
+## Pensando en React
 
 Pensar en React es implementar un nuevo modelo mental que te permite rápidamente visualizar y definir componentes en una interfaz para así planificar la arquitectura de los mismos y ser capaz rápidamente de encontrar unidades lógicas que pueden ser reutilizadas y compartidas.
 
----
+----
 
-# Primeros pasos
+# 🐾 Primeros pasos
 
 El directorio de esta lección está vació y esto es por que en esta lección solo revisaremos algunos conceptos usando ejemplos de código e interfaces de otros proyectos.
 
@@ -29,7 +29,7 @@ Para esta primera lección revisaremos una interfaz conocida para encontrar los 
 - Encontrar componentes en una interfaz
 - Desarrollar el modelo mental de pensar en componentes.
 
----
+----
 
 ### 🏋️‍♂️Ejercicios
 
@@ -37,9 +37,9 @@ Para hacer esto seleccionaremos una aplicación o interfaz y la dividiremos en l
 
 #### Recursos
 
-- Recurso 1
-- Recurso 2
+- [ ] Recurso 1
+- [ ] Recurso 2
 
 ### 💸 Crédito Extra
 
-Listar una serie de componentes base de una interfaz genérica.
+- [ ] Listar una serie de componentes base de una interfaz genérica.
