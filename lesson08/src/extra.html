@@ -45,38 +45,36 @@
         // 💡 Crea un componente React que renderizará una lista. 
         // El componente debe recibir y renderizar la prop children
         // el componente recibirá la clase css `list`
-        /*
+        
         const Ul = ({ children}) => {
-            return <ul 🚨 aqui debe ir la prop para definir la clase css>
-            // 🚨 aqui debe ir la prop a renderizar
+            return <ul className="list">
+                {children}
             </ul>
         }
-        */
-        // 💡 Crea un componente Item que recibirá la prop children
-        // 🏋️‍♂️ 1. este componente aplicara `inline style` para definir el estilo que require
-        // 🏋️‍♂️ 2. Agrega una nueva prop para recibir los estilos
+        
+        // 💡 En este componente debes agregar algunas clases
+        // 🏋️‍♂️ 1. Define la clase base `item` para el elemento renderizado
+        // 🏋️‍♂️ 2. Acepta una nueva prop para recibir el nombre de una clase. Esta nueva clase de unirse con la clase anterior
     
-        /*
-        const Item = ({ children }) => {
-            return <li 🚨 aqui va la definicion del estilo en linea>
+       
+        const Item = ({ children, style }) => {
+            return <li style={style}>
                 🚨 aqui va la prop a renderizar
             </li>
          }
-         */
+         
 
         // 💡 Este es el componente que renderiza la lista de items
-        // acepta una prop llamada items que recibe un array de strings
-        // debes renderizar estos elementos utilizando el componente Item     
-        // 🏋️‍♂️ 2. Debes pasar los estilos en linea como una prop al componente Item
-        // 🏋️‍♂️ 3. Define un arreglo de tamaños. Utiliza este arreglo junto al indice generado por Array.map para 
-        // que cada elemento renderizado tenga tamaños de fuente diferente. 
+        // 🏋️‍♂️ 2. Debes pasar la nueva prop que definiste en Item para enviar el nombre de la clase que deseas
         const List = ({ items}) => {
-            /*
-            🏋️‍♂️ 3. Arreglo de tamaños
-            const fontSizes = []
-            */
+        
+            const fontSizes = ['10px', '20px', '30px']
             return (<Ul>
-            {/* 🚨 aquí debes renderizar los elmentos usando el componente `<Item>`  */}  
+                { items.map((item, index) => {
+                    return (
+                        <Item style={{ fontSize: fontSizes[index]}}>{ item } </Item>
+                    )
+                })}
             </Ul>
             )
         }
