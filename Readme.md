@@ -67,6 +67,12 @@ En cada directorio encontrarás un nuevo archivo Readme.md, en el encontrarás u
 
 ### Listado de lecciones
 
-- [00 - Introducción](./lesson00)
-- [01 - Componentes](./lesson01)
-- [02 - Creando una app estática base ](./lesson02)
+- [00 - Introducción](./lesson00/Readme.md)
+- [01 - Componentes](./lesson01/Readme.md)
+- [02 - Creando una app estática base ](./lesson02/Readme.md)
+- [03 - El mundo sin JSX](./lesson03/Readme.md)
+- [04 - Conociendo JSX](./lesson04/Readme.md)
+- [05 - Props](./lesson05/Readme.md)
+- [06 - Arrays](./lesson06/Readme.md)
+- [07 - Composición](./lesson07/Readme.md)
+- [08 - Estilos](./lesson08/Readme.md)
