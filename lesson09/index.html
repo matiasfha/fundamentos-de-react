@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso: React desde cero - Leccion 09</title>
+    <!-- 💡Aquí es donde debes agregar los archivos de React -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- 💡 Aquí será donde escribamos nuestros scripts -->    
+    <script type="text/babel">
+        const root = document.getElementById('root')
+        const options = ['Option 1', 'Option 2','Option 3']
+        const App = () => {
+
+          /* 🚨  🏋️‍♂️ 2. Aquí define el comportamiento de la funcion onSelectChange. 
+            Esta funcion solo mostrará el valor seleccionado por consola o en un alert
+            El evento es un objeto con varios atributos uno de ellos es `target` que a su vez 
+            es un objeto que contiene el valor en el atributo `value`
+            */ 
+          const onSelectChange = (event) => {
+            
+          }
+
+          /* 🚨  🏋️‍♂️ 3. Aquí define el manejador de eventos para el input
+          Muestra en consola el valor capturado
+            */ 
+          const onInputChange = (event) => {
+            
+          }
+
+
+          /* 🚨. 💸  4. Crédito Extra: Define la funcion onClickButton que será pasada como prop 
+          a tu componente Button
+            */ 
+          const onClickButton = (event) => {
+            
+          }
+          return (
+            <div>
+              {/* 🏋️‍♂️ 1. Crea un elemento botón que al ser clickeado muestra una alerta 
+              utiliza para ello el evento onClick y la funcion () => alert('Boton presionado') */}
+              
+
+              {/* 🏋️‍♂️ 2. Utilizando el arreglo de opciones definido más arriba crea un elemento
+              <select> que emite un evento onChange. 
+              El evento sera manejado por una nueva funcion llamada onSelectChange */}
+              <select>
+                {options.map(option => <option value={option} key={option}>{option}</option>)}
+              </select>
+              
+             {/* 🏋️‍♂️  3. Crea un elemento input que recibe como evento onChange y como manejador de evento
+             la funcion onInputChange que debes declarar */}
+
+              <input type="text" placeholder="Escribe algo"/>
+
+            {/*💸 4. Crea y Renderiza un componente Button que acepta una prop llamada onClick */}                            
+              
+            </div>
+          )
+        }
+        ReactDOM.render(<App />, root)
+    </script>
+
+</body>
+</html>

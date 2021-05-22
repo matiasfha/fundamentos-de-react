@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso: React desde cero</title>
+    <!-- 💡Aquí es donde debes agregar los archivos de React -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- 💡 Aquí será donde escribamos nuestros scripts -->
+    
+    <script type="text/babel">
+        
+        const Button = ({ onClick, children}) => {
+          return <button onClick={onClick}>{children}</button>
+        }
+        
+        const root = document.querySelector('#root')
+        const options = ['Option 1', 'Option 2','Option 3']
+        const App = () => {
+          
+          const onSelectChange = (event) => {
+            const { value } = event.target.value
+            alert(`Seleccionaste la opcion ${value}`)
+          }
+
+          const onInputChange = (event) => {
+            const { value } = event.target.value
+            console.log(`Escribiendo...`)
+            console.log(value)
+          }
+
+          return (
+            <div>
+              <button onClick={alert('Boton presionado')}>Muestra una alerta</button>
+              <select onChange={onSelectChange}>
+                {options.map(option => <option value={option}>{option}</option>)}
+              </select>
+              <input type="text" onChange={onInputChange} placeholder="Escribe algo"/>
+              <Button onClick={onClickButton}>Click me</Button>
+            </div>
+          )
+        }
+        
+        ReactDOM.render(<App />, root)
+    </script>
+
+</body>
+</html>
