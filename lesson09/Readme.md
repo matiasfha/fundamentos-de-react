@@ -1,88 +1,63 @@
-# Lección 08 - Estilos
+# Lección 09 - Eventos
 
-React ofrece dos formas básicas o por defecto para manejar los estilos de tus componentes.
+Una aplicación web tiene dos tareas esenciales: presentar información al usuario y “reaccionar” a acciones que el usuario realiza. Hasta ahora hemos visto como presentar información - creando componentes para renderizar cierto contenido - pero, ¿cómo reaccionar a una acción del usuario?.
 
-Los elementos que usas para crear tus componente React aceptan dos props para estos fines `style` y `className`.
+Reaccionar al usuario es conocido como manejar eventos y esto es algo que javascript ya implementa por medio de los eventos del DOM.
+
+Los eventos en React son similares a los eventos del DOM, con pequeñas diferencias.
+
+- Los eventos en React son nombrados en `camelCase` por ejemplo . `onClick`.
+- El evento que pasas como argumento es una función y no un string como en el DOM.
 
 ```javascript
-const Container = () => {
-	return <div style={{ border:"1px red solid",height:20,width:100 }}>Hola Mundo!</div>
-}
-
-const Title = () => {
-	return <h1 className="title">Hola Mundo!</h1>
-}
-
-↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ 
-
-HTML
-<div style="border:1px red solid; height: 20px; width: 100px">Hola Mundo!</div>
-
-<h1 class="title">Hola Mundo!</h1>
+<button onClick={submit}>Submit</button>
 ```
 
-En el primer ejemplo puedes notar que el uso de la prop `style` es muy similar a como utilizas estilos `in-line` en  HTML, la gran diferencia aquí es que en React la prop `style` recibe un objeto (por eso se usan dobles llaves `{{` una para iniciar la interpolación y otra para definir el objeto). La otra diferencia es que las propiedades CSS son escritas en formato `camelCase` ¿por qué? Recuerda que JSX es básicamente javascript, babel se encarga de transformarlo a simples llamadas a `React.createElement`. Esta llamada hace uso de la propiedad `style` del DOM que utiliza el formato `camelCase` (la propiedad `style`  del DOM utiliza un objeto tipo [CSSStyleDeclaration](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration) )
+Otra diferencia se encuentra en una práctica común al escribir HTML y vanilla JS: utilizar `return false;` para evitar el comportamiento por defecto del evento en cuestión. En React debes utilizar explicitamente `preventDefault`. ¿por qué? React no expone los eventos del DOM directamente, al contrario, expone una API llamadas `SyntheticEvent`.
 
-La siguiente prop que podemos usar es `className` , esta es una de las pocas diferencias con HTML, `className` es lo mismo que usar `class`, es decir, acepta un string con los nombres de las clases CSS que serán aplicadas.
+Estos eventos son implementados de forma compatible con todos los navegadores (basados en el [spec W3C](https://www.w3.org/TR/DOM-Level-3-Events/)). Cuando defines un manejador de eventos como `onClick` la función que defines como argumento recibe un evento sintético. Este evento tiene la misma interfaz que los eventos nativos del navegador, por lo que su uso se hace "conocido”.
 
-Estas son las formas básicas en que puedes aplicar estilos a tus componentes utilizando CSS tal como lo has hecho hasta ahora.
+La idea de usar esta API es que React normaliza los eventos para hacer que funcionen de la misma manera en todos los navegadores.
 
-Pero recuerda que la idea de los componentes es que estos encapsulen tanto lógica como representación, por lo que los estilos también deberían estar encapsulados. Para lograr esto existen varias técnicas entre ellas.
+Ahora, volviendo al uso de `preventDefault`.  ¿Cómo evitas el comportamiento por defecto de un evento?. Simplemente accediendo al argumento evento y llamando `preventDefault`
 
-- **inline styles:**  Esta es la forma base de la modularización de los estilos. Simplemente usando la prop `style` puedes pasar estilos que afectan solo al componente en juego.
-- **CSS Modules**: Esta técnica te permite importar archivos css directamente en tu archivo javascript de un componente en particular, el css generado aquí afecta exclusivamente a tu componente.
-- **CSS-in-JS**:  La idea de esta técnica es escribir el código css directamente usando el poder de javascript, dentro de esta area se encuentra styled-componentes
+```javascript
+function onClickEvent(event) {
+	event.preventDefault()
+}
+```
 
-Revisaremos estas técnicas más avanzadas en una siguiente lección, por ahora usaremos la forma básica de agregar estilos a nuestra aplicación estática.
+Una práctica común, es utilizar los eventos para pasar ciertos datos de un lado a otro, por ejemplo para pasar el `id` de algún elemento para crear una llamada al servidor, para lograr esto debes pasar argumentos extra a la función que usas como manejador de eventos, para hacer esto simplemente rodeas tu función con otra función.
+
+```javascript
+items.map(item => {
+	<button onClick={(event) => onClickHandler(event, item.id)}>{item.name}</button>
+})
+```
 
 ## 🐾 Primeros Pasos
 
 En esta lección trabajaremos agregando estilos utilizando los dos métodos base para definir el css de tus componentes.
 
-Tendremos el siguiente css disponible en nuestra página
+Para esta lección usaremos algunos elementos que solicitan acciones de usuario para así capturar sus eventos, también crearemos un componente con el mismo objetivo
 
-```css
-.list {
-	  list-style: none
-	}
-	.item {
-	  background-color: lightblue;
-	  padding: 10px;
-	  border: 1px blue solid;
-	  border-radius: 5px;
-	  margin: 5px;
-	}
-	.item--red {
-	  background-color: red;
-	}
-	.item--blue {
-	  background-color: lightblue;
-	}
-	.item--purple {
-	  background-color:purple ;
-	}
-	.item--underline {
-	  text-decoration: underline;
-	}
-```
-
-Tu trabajo será utilizar estos estilos en tus componentes aplicando lo que hemos aprendido hasta ahora.
-
-- Renderizado de arreglos
-- interpolación
+- Boton
+- Selectbox
+- Input
+- div: Si!. En React es posible agregar un manejador de eventos a cualquier componente. Los eventos de React son “sintéticos” y puede ser utilizados en cualquier elemento.
 
 ## 🎯 Objetivos
 
-- Conocer como funciona las prop `style` y `className`.
-- Utilizar conocimientos adquiridos en conjunto para dar estilos a los componentes.
+- Aprender como agregar eventos a un elemento.
+- Conocer como manejar los eventos definidos.
+- Conocer como definir componentes que acepten eventos.
 
 ## 🏋️‍♂️ Ejercicios
 
-1. Renderiza una lista de elementos. El contenedor de la lista debe utiliza la clase `list` y los elementos de la lista deben usar estilo en linea por ejemplo para definir el tamaño de la fuente.
-2. Define el uso de una prop para recibir el estilo en linea de cada Item. la definición del estilo en linea deberá hacerse fuera del componente Item.
-3. Define el uso de diferentes tamaños de fuente para cada item renderizado. Para esto tendrás que crear un arreglo con los valores que quieres usar y luego utilizar `Array.map` para acceder a cada tamaño en el momento de renderizar cada elemento.
+1. Crea un elemento botón que al ser clickeado muestra un alerta.
+2. Crea un elemento `select` que al cambiar el valor seleccionado muestra una alerta con el valor.
+3. Crea un elemento input que muestra en consola lo que se escribe.
 
 ## 💸 Crédito Extra
 
-1. Además de usar estilos en linea, utiliza la clase `item` en cada item.
-2. Permite que el componente `Item` reciba una prop para modificar la clase css base.
+1. Crea un **componente** `Button` que acepta una prop `onClick`. Esta función estará definida en el componente padre.

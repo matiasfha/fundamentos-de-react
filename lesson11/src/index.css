@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: #000000;
+}
+
+.app {
+  @apply container mx-auto px-4 grid grid-cols-4;
+}
+
+.main {
+  @apply col-span-2 h-full w-11/12 mx-auto border-r border-l border-gray-100 border-opacity-20;
+}
+
+.main .header {
+  @apply text-left border-b border-gray-100 border-opacity-20 h-14 p-4;
+}
+
+.main .header h2 {
+  @apply text-xl font-bold;
+}
+
+.tweet-form {
+  @apply flex flex-row p-4 content-between border-b border-gray-100 mb-4;
+  .avatar {
+    @apply rounded-full h-12 mr-4;
+  }
+
+  .container {
+    @apply divide-y-2 divide-gray-100 divide-opacity-25 divide-solid grid grid-rows-2 w-full;
+  }
+
+  textarea {
+    @apply bg-black w-full shadow-inner p-2 pb-8 border-0 text-white;
+  }
+
+  .tools {
+    @apply py-4 grid grid-cols-2;
+  }
+
+  .tools-content {
+    @apply flex flex-row justify-between text-dodger-blue;
+    .container {
+      @apply flex flex-row justify-between text-dodger-blue;
+    }
+    .container svg {
+      @apply hover:text-dodger-blue-300 cursor-pointer transition-all duration-500 ease-in-out;
+    }
+  }
+
+  button {
+    @apply disabled:opacity-60 bg-dodger-blue rounded-full px-8 h-8 w-24 text-base text-white text-left flex items-center justify-center justify-self-end hover:bg-dodger-blue-400;
+  }
+}
+
+.tweet-card {
+  @apply flex p-4 content-between border-b border-gray-100 border-opacity-20 transition-all duration-1000 ease-in-out;
+  animation: fadeIn 1s linear;
+  animation-fill-mode: both;
+  .avatar {
+    @apply rounded-full h-12 mr-4;
+  }
+
+  .container {
+    @apply text-gray-200 font-normal;
+  }
+
+  .author {
+    @apply font-bold text-gray-200;
+  }
+  .author > span {
+    @apply ml-1 font-normal text-gray-500;
+  }
+
+  .toolbar {
+    @apply pt-2 flex flex-row justify-between text-gray-400 w-full;
+  }
+  .toolbar svg {
+    @apply hover:text-dodger-blue transition-all duration-500 cursor-pointer;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
