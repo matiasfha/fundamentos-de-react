@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso: React desde cero</title>
+    <title>Curso: React desde cero - Leccion 10</title>
     <!-- 💡Aquí es donde debes agregar los archivos de React -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
@@ -12,42 +12,55 @@
 </head>
 <body>
     <div id="root"></div>
-    
-    <!-- 💡 Aquí será donde escribamos nuestros scripts -->
-    
+    <!-- 💡 Aquí será donde escribamos nuestros scripts -->    
     <script type="text/babel">
-        
-        const Button = ({ onClick, children}) => {
-          return <button onClick={onClick}>{children}</button>
-        }
-        
-        const root = document.querySelector('#root')
-        const options = ['Option 1', 'Option 2','Option 3']
+        const root = document.getElementById('root')
         const App = () => {
-          
-          const onSelectChange = (event) => {
-            const { value } = event.target.value
-            alert(`Seleccionaste la opcion ${value}`)
-          }
+            /* 💡 Esta es la forma en que react maneja el estado interno de un componente
+            para lograrlo utilizamos el hook `useState` que recibe un valor como estado inicial
+            y retorna una tupla (dos elementos) donde:
+            - El primero es el valor del estado en un momento dado
+            - El segundo es una función que te permite actualizar el estado
+            En este caso ambos estados iniciales son un string vacio.
+            */
+            const [ inputState, setInputState ] = React.useState('')
+            const [ selectState, setSelectStat ] = React.useState('')
 
-          const onInputChange = (event) => {
-            const { value } = event.target.value
-            console.log(`Escribiendo...`)
-            console.log(value)
-          }
+            /* 🏋️‍♂️ define lo que hará el manejador de eventos del input */
+            const handleInput =(event) => {
+            }
+            /* 🏋️‍♂️ define lo que hará el manejador de eventos del select */
+            const handleSelect = (event) => {
+            }
 
-          return (
-            <div>
-              <button onClick={alert('Boton presionado')}>Muestra una alerta</button>
-              <select onChange={onSelectChange}>
-                {options.map(option => <option value={option}>{option}</option>)}
-              </select>
-              <input type="text" onChange={onInputChange} placeholder="Escribe algo"/>
-              <Button onClick={onClickButton}>Click me</Button>
-            </div>
+            const onSubmit = (event) => {
+              // 🚨 No olvides que la acción por defecto de enviar un formulario es recargar la página
+              // en este caso quieres prevenir que eso ocurra usando preventDefault()
+              
+              // 🏋️‍♂️ tan sólo mostremos por consola los valores de los elementos de formulario.
+              console.log({
+                input: inputState,
+                select: selectState 
+              })
+              // 🤯 Aquí es donde realizarás la petición a una api externa para almanacenar los datos obtenidos del estado
+            }
+            return (
+              <div>  
+                {/* 🏋️‍♂️ Este formulario debe recibir una prop en el evento ´onSubmit` */}
+                <form>
+                  {/* 🏋️‍♂️ Este input debe recibir dos props extras. El manejador de eventos y el valor actual del estado asociado */}
+                  <input type="text" />
+                  {/* 🏋️‍♂️ Este select debe recibir dos props extras. El manejador de eventos y el valor actual del estado asociado */}
+                  <select>
+                    <option value="option 1">Option 1</option>
+                    <option value="option 2">Option 2</option>
+                    <option value="option 3">Option 3</option>
+                  </select>
+                  <button type="submit">Enviar</button>
+                </form>
+              </div>
           )
         }
-        
         ReactDOM.render(<App />, root)
     </script>
 
