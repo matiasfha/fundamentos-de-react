@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso: React desde cero - Leccion 10</title>
+    <title>Curso: React desde cero - Leccion 09</title>
     <!-- 💡Aquí es donde debes agregar los archivos de React -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
@@ -15,50 +15,53 @@
     <!-- 💡 Aquí será donde escribamos nuestros scripts -->    
     <script type="text/babel">
         const root = document.getElementById('root')
+        const options = ['Option 1', 'Option 2','Option 3']
         const App = () => {
-            /* 💡 Esta es la forma en que react maneja el estado interno de un componente
-            para lograrlo utilizamos el hook `useState` que recibe un valor como estado inicial
-            y retorna una tupla (dos elementos) donde:
-            - El primero es el valor del estado en un momento dado
-            - El segundo es una función que te permite actualizar el estado
-            En este caso ambos estados iniciales son un string vacio.
-            */
-            const [ inputState, setInputState ] = React.useState('')
-            const [ selectState, setSelectStat ] = React.useState('')
 
-            /* 🏋️‍♂️ define lo que hará el manejador de eventos del input */
-            const handleInput =(event) => {
-            }
-            /* 🏋️‍♂️ define lo que hará el manejador de eventos del select */
-            const handleSelect = (event) => {
-            }
+          /* 🚨  🏋️‍♂️ 2. Aquí define el comportamiento de la funcion onSelectChange. 
+            Esta funcion solo mostrará el valor seleccionado por consola o en un alert
+            El evento es un objeto con varios atributos uno de ellos es `target` que a su vez 
+            es un objeto que contiene el valor en el atributo `value`
+            */ 
+          const onSelectChange = (event) => {
+            
+          }
 
-            const onSubmit = (event) => {
-              // 🚨 No olvides que la acción por defecto de enviar un formulario es recargar la página
-              // en este caso quieres prevenir que eso ocurra usando preventDefault()
+          /* 🚨  🏋️‍♂️ 3. Aquí define el manejador de eventos para el input
+          Muestra en consola el valor capturado
+            */ 
+          const onInputChange = (event) => {
+            
+          }
+
+
+          /* 🚨. 💸  4. Crédito Extra: Define la funcion onClickButton que será pasada como prop 
+          a tu componente Button
+            */ 
+          const onClickButton = (event) => {
+            
+          }
+          return (
+            <div>
+              {/* 🏋️‍♂️ 1. Crea un elemento botón que al ser clickeado muestra una alerta 
+              utiliza para ello el evento onClick y la funcion () => alert('Boton presionado') */}
               
-              // 🏋️‍♂️ tan sólo mostremos por consola los valores de los elementos de formulario.
-              console.log({
-                input: inputState,
-                select: selectState 
-              })
-              // 🤯 Aquí es donde realizarás la petición a una api externa para almanacenar los datos obtenidos del estado
-            }
-            return (
-              <div>  
-                {/* 🏋️‍♂️ Este formulario debe recibir una prop en el evento ´onSubmit` */}
-                <form>
-                  {/* 🏋️‍♂️ Este input debe recibir dos props extras. El manejador de eventos y el valor actual del estado asociado */}
-                  <input type="text" />
-                  {/* 🏋️‍♂️ Este select debe recibir dos props extras. El manejador de eventos y el valor actual del estado asociado */}
-                  <select>
-                    <option value="option 1">Option 1</option>
-                    <option value="option 2">Option 2</option>
-                    <option value="option 3">Option 3</option>
-                  </select>
-                  <button type="submit">Enviar</button>
-                </form>
-              </div>
+
+              {/* 🏋️‍♂️ 2. Utilizando el arreglo de opciones definido más arriba crea un elemento
+              <select> que emite un evento onChange. 
+              El evento sera manejado por una nueva funcion llamada onSelectChange */}
+              <select>
+                {options.map(option => <option value={option} key={option}>{option}</option>)}
+              </select>
+              
+             {/* 🏋️‍♂️  3. Crea un elemento input que recibe como evento onChange y como manejador de evento
+             la funcion onInputChange que debes declarar */}
+
+              <input type="text" placeholder="Escribe algo"/>
+
+            {/*💸 4. Crea y Renderiza un componente Button que acepta una prop llamada onClick */}                            
+              
+            </div>
           )
         }
         ReactDOM.render(<App />, root)

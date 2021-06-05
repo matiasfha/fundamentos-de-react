@@ -1,88 +1,60 @@
-# Lección 08 - Estilos
+# Lección 10 - Formularios - Componentes Controlados
 
-React ofrece dos formas básicas o por defecto para manejar los estilos de tus componentes.
+La forma primaria de obtener datos de un usuario en un sitio web es por medio del formularios.
 
-Los elementos que usas para crear tus componente React aceptan dos props para estos fines `style` y `className`.
+Un formulario permite manejar un conjunto de elementos que capturan información del usuario. A su vez, permiten comunicarse con el servidor o una api externa al ser enviados.
+
+Los elementos de un formulario funcionan ligeramente diferente a otros elementos HTML base ya que estos, de forma nativa, manejan un estado interno que les permite almacenar los datos capturados.
+
+En React existen dos formas de manejar los formularios:
+
+- **Componentes Controlados**
+- **Componentes no-Controlados**
+
+## Componentes Controlados
+
+Como mencione antes, los elementos de un formulario HTML mantienen su propio estado interno y lo actualizan en base a las acciones del usuario. React también maneja su prop estado y si hablamos de estado mutable React ofrece su propia API para manejarlo. Esta es nuestra primera aproximación al manejo de estado.
+
+La forma en que utilizas el estado en React es por medio de la función llamada `useState` esta función es parte de la api de **hooks**. Esta función es sencilla de utilizar, su intención almacenar en un solo lugar el estado que el componente renderizará. Esto permite que tus componentes reaccionen al cambio de estado y se vuelvan a renderizar para reflejar dicho cambio.
+
+Su forma de uso es sencilla
 
 ```javascript
-const Container = () => {
-	return <div style={{ border:"1px red solid",height:20,width:100 }}>Hola Mundo!</div>
-}
-
-const Title = () => {
-	return <h1 className="title">Hola Mundo!</h1>
-}
-
-↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ 
-
-HTML
-<div style="border:1px red solid; height: 20px; width: 100px">Hola Mundo!</div>
-
-<h1 class="title">Hola Mundo!</h1>
+const [ count, setCount ] = React.useState(0)
 ```
 
-En el primer ejemplo puedes notar que el uso de la prop `style` es muy similar a como utilizas estilos `in-line` en  HTML, la gran diferencia aquí es que en React la prop `style` recibe un objeto (por eso se usan dobles llaves `{{` una para iniciar la interpolación y otra para definir el objeto). La otra diferencia es que las propiedades CSS son escritas en formato `camelCase` ¿por qué? Recuerda que JSX es básicamente javascript, babel se encarga de transformarlo a simples llamadas a `React.createElement`. Esta llamada hace uso de la propiedad `style` del DOM que utiliza el formato `camelCase` (la propiedad `style`  del DOM utiliza un objeto tipo [CSSStyleDeclaration](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration) )
+La función recibe un argumento que representa el estado inicial, en este caso el valor `0` y retorna un arreglo o "tupla” cuyo primera valor representa el estado actual y el segundo valor siempre será una función (que puedes llamar como quieras) que te permite actualizar dicho estado.
 
-La siguiente prop que podemos usar es `className` , esta es una de las pocas diferencias con HTML, `className` es lo mismo que usar `class`, es decir, acepta un string con los nombres de las clases CSS que serán aplicadas.
+Utilizaremos esta funcionalidad de React para mantener una “sola fuente de la verdad” al utilizar elementos de formulario, es decir, el componente que renderiza los elementos de formulario es también quien controlará el estado de los elementos en base a las acciones del usuario. Estos elementos que son manejados por el estado del componente padre son llamados **componentes controlados**.
 
-Estas son las formas básicas en que puedes aplicar estilos a tus componentes utilizando CSS tal como lo has hecho hasta ahora.
+En este tipo de componentes, el valor del input (o de cualquier otro elemento del formulario) es manejado por el estado de React. Ciertamente esto implica escribir un poco más de código, pero también te da gran poder y flexibilidad permitiéndote por ejemplo pasar este valor como prop a toras partes de la interfaz.
 
-Pero recuerda que la idea de los componentes es que estos encapsulen tanto lógica como representación, por lo que los estilos también deberían estar encapsulados. Para lograr esto existen varias técnicas entre ellas.
+## Form
 
-- **inline styles:**  Esta es la forma base de la modularización de los estilos. Simplemente usando la prop `style` puedes pasar estilos que afectan solo al componente en juego.
-- **CSS Modules**: Esta técnica te permite importar archivos css directamente en tu archivo javascript de un componente en particular, el css generado aquí afecta exclusivamente a tu componente.
-- **CSS-in-JS**:  La idea de esta técnica es escribir el código css directamente usando el poder de javascript, dentro de esta area se encuentra styled-componentes
+El element `<form>` te permite reunir elementos de captura de datos, es un contenedor que por lo general permite enviar los datos reunidos al servidor  un "manejador del formulario" que se define en el atributo `action`, esto además de enviar los datos también refresca la página, un comportamiento que actualmente no se utiliza mucho. Con React tienes una forma de controlar que hacer con los datos recolectados por medio del evento `onSubmit`.
 
-Revisaremos estas técnicas más avanzadas en una siguiente lección, por ahora usaremos la forma básica de agregar estilos a nuestra aplicación estática.
+El evento  `onSubmit` recibe una función que a su vez recibe un evento. Esta función es ejecutada cuando el formulario es "enviado", por ejemplo al presionar el botón `submit` .
+
+SI estas usando componentes controlados, es decir, estado interno en tu componente entonces en el manejador de `onSubmit` simplemente debes leer el estado.
 
 ## 🐾 Primeros Pasos
 
-En esta lección trabajaremos agregando estilos utilizando los dos métodos base para definir el css de tus componentes.
+En esta lección trabajaremos con elementos de un formulario para capturar información del usuario.
 
-Tendremos el siguiente css disponible en nuestra página
-
-```css
-.list {
-	  list-style: none
-	}
-	.item {
-	  background-color: lightblue;
-	  padding: 10px;
-	  border: 1px blue solid;
-	  border-radius: 5px;
-	  margin: 5px;
-	}
-	.item--red {
-	  background-color: red;
-	}
-	.item--blue {
-	  background-color: lightblue;
-	}
-	.item--purple {
-	  background-color:purple ;
-	}
-	.item--underline {
-	  text-decoration: underline;
-	}
-```
-
-Tu trabajo será utilizar estos estilos en tus componentes aplicando lo que hemos aprendido hasta ahora.
-
-- Renderizado de arreglos
-- interpolación
+Para esto usaremos **componentes controlados** y definiremos una función para manejar el envío del formulario.
 
 ## 🎯 Objetivos
 
-- Conocer como funciona las prop `style` y `className`.
-- Utilizar conocimientos adquiridos en conjunto para dar estilos a los componentes.
+- Manejar estados de un form.
+- Capturar los datos de un form.
+- Conocer componentes controlados.
 
 ## 🏋️‍♂️ Ejercicios
 
-1. Renderiza una lista de elementos. El contenedor de la lista debe utiliza la clase `list` y los elementos de la lista deben usar estilo en linea por ejemplo para definir el tamaño de la fuente.
-2. Define el uso de una prop para recibir el estilo en linea de cada Item. la definición del estilo en linea deberá hacerse fuera del componente Item.
-3. Define el uso de diferentes tamaños de fuente para cada item renderizado. Para esto tendrás que crear un arreglo con los valores que quieres usar y luego utilizar `Array.map` para acceder a cada tamaño en el momento de renderizar cada elemento.
+1. Define el evento `onSubmit` para el form.
+2. Define los manejadores de eventos para el input y para el select.
+3. Actualiza el método `onSubmit` para que no refresque la página.
 
 ## 💸 Crédito Extra
 
-1. Además de usar estilos en linea, utiliza la clase `item` en cada item.
-2. Permite que el componente `Item` reciba una prop para modificar la clase css base.
+1. Agrega un nuevo input al formulario y maneja un solo estado para todos los elementos. (Tip: puede usar la prop `name` para obtener los datos).

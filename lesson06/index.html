@@ -9,6 +9,21 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .contacts-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .contact {
+            padding: 10px;
+            border:1px rebeccapurple solid;
+            border-radius: 10px;
+            -webkit-box-shadow: -2px 1px 9px 2px #000000; 
+            box-shadow: -2px 1px 9px 2px #000000;
+        }
+    </style>
 </head>
 <body>
     <div id="root"></div>
@@ -16,11 +31,88 @@
     <!-- 💡 Aquí será donde escribamos nuestros scripts -->
     
     <script type="text/javascript">
+    // 💡 object que representa un usuario
+    const usuarioWithContacts = {
+        name: 'User 1',
+        contacts: [
+            {
+                name: 'Contact 1'
+            },
+            {
+                name: 'Contact 2'
+            },
+            {
+                name: 'Contact 3'
+            }
+        ]
+    }
 
-    // 💡 Crea un componente React, usando JSX que reciba props 
-    // const Component = React.createElement('Componente', null, h1)        
+    // 💡 usuario sin contactos
+    const usuarioWithoutContacts = {
+        name: 'User 2',
+        contacts: [
+            
+        ]
+    }
 
-    const root = document.getElementById('root')
+    // 💡 Componente que mostrá los contactos del usuario
+    function Contacts(props) {
+        return (
+            <div className="contacts-list">
+                {props.map(contact => {
+                    return (
+                        <div className="contact">
+                            {contact.name}
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    }
+
+    function NoContacts(){
+        return <h1>No hay Contactos</h1>
+    }
+
+    function RenderUsersWithTernary(props) {
+        {/+ 🏋️‍♂️ Utuliza un operador ternario para renderizar los componentes */}
+        {/* <Contacts contacts={props.users.contacts /> y <NoContacts /> */}
+        return (
+           <div>
+                <h3>{props.user.name}</h3>
+                {/* condicion ? verdadero : falso */}
+            </div> 
+        )
+    }
+    
+    function RenderUsersWithLogic(props) {
+        {/+ 🏋️‍♂️ Utuliza el operador lógico && para renderizar los componentes */}
+        {/* <Contacts contacts={props.users.contacts /> y <NoContacts /> */}
+        return (
+           <div>
+                <h3>{props.user.name}</h3>
+                {/* condicion && Componente */}
+            </div> 
+        )
+    }
+
+    // 🍬 Crea un componente para renderizar condicionalmente
+    // utilizando un bloque if-else.
+    // ¿qué ocurre y por que?
+
+    
+    function App(){
+        return (
+            <div>
+                <h1>Lista de Contactos por usuario</h1>
+                <RenderUsersWithTernary user={usuarioWithContacts} />
+                <hr />
+                <RenderUsersWithLogic user={usuarioWithoutContacts} />
+                 
+            </div>
+        )
+    }
+    
     ReactDOM.render(h1, root)
 
     </script>

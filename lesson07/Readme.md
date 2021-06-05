@@ -1,44 +1,108 @@
-# Lesson 06 - Arrays
+# Lesson 7 - Composicion
 
-Una de las estructuras de datos más utilizada en cualquier aplicación web es el Array. Esta simple estructura es la forma más sencilla de contener y manipular colecciones de datos. Por esto, es importante conocer como trabajar con ella al momento de utilizar componentes React.
+Uno de los conceptos que cambió radicalmente la forma en que desarrollamos aplicaciones en la web es la idea de utilizar componentes.
 
-Una de las tareas más comunes relacionadas con arrays es la idea de renderizar una lista de elementos en la interfaz, esta lista de elementos está representada por un array.
+Los componentes son las bases de construcción, los bloques lego, que nos permiten crear estructuras más complejas que nos permitirán desarrollar una solución.
 
-Para poder renderizar una lista debemos iterar sobre ella y como ya revisamos en la lección sobre JSX, podemos utilizar interpolación para escribir código javascript válido en forma de una expresión que nos permita iterar sobre los elementos, en este caso usaremos `Array.map` .
+Una característica de este modelo de componentes es su capacidad de unirse o
 
-> Una expresión produce un valor y puede ser escrita en cualquier parte donde un valor sea esperado, por ejemplo como un argumento de una función.
+La forma en que React facilita la composición de componentes es usando las props.
 
-`Array.map` permite iterar sobre un arreglo y retorna un nuevo arreglo, es decir retorna un valor. Este nuevo arreglo es el que será renderizado por React.
+Las props son la forma en que los componentes se comunican entre si, es su API, una los componentes en React tienen una prop particular: `children`. Esta prop permite pasar diferentes valores: componentes, elementos, strings, números o incluso `null`
 
-Un componente React acepta arreglos de valores o componentes en su prop `children` por lo que podemos transformar los elementos de arreglo en un nuevo componente o simplemente renderizar el arreglo directamente.
+Los valores pasados por medio de la prop `children` son después renderizados por el componente que las acepta.
 
-Una vez que tenemos el arreglo renderizado podemos ver que React nos avisa de un problema: Nos falta definir una prop llamad a `key` en nuestros compoenntes.
+```javascript
+function BoxContainer({ children}) {
+	return (
+		<div className="box-container">
+			{children}
+		</div>
+	)
+}
+```
 
-Esta prop debe recibir un valor único e invariable. Esto es simple de resolver en un caso donde el arreglo de datos utilizado es fijo y no cambia en el tiempo, podemos resolver este problema simplemente utilizando un valor como el indice del elemento en el arreglo. ¿Pero que ocurre si el arreglo de datos cambia en el tiempo?
+Esto permite que otros componentes puedan utilizar `BoxContainer` como padre.
 
-La prop `key` le ayuda a React a mantener una forma de "rastrear" los elementos renderizados en cada proceso de actualización, si la prop no está presente React no podrá saber que elemento cambió y donde estaba y puede mezclar algunas cosas.
+```javascript
+function App() {
+	return (
+		<BoxContainer>
+			<h1>Welcome</h1>
+			<Dashboard>
+				<DashboardNavBar />
+				<DashboardContent />
+			</Dashboard>
+		</BoxContainer>
+	)
+}
+```
 
-Un caso es que renderizas la lista y despues agregas un nuevo elemento. React no podrá identificar si el elemento que agregaste se debe ubicar al principio, final o en medio, esto es por que React no puede entender nuestras intenciones y solo ve que en un momento se le entrego una lista a renderizar, y luego se le pide renderizar una lista diferente. React intenta comparar el antes y después por lo que hará su mejor suposición y muchas veces esto funciona.
+Todo lo que este dentro del tag `<BoxContainer>` es considerado `children` y es pasado al componente `BoxContainer`.
 
-Pero las cosas se complican cuando alguno de los elementos del arreglo es un componente que contiene cierto estado React puede errar y complicar el resultado de tu UI.
+Por lo general, estos componentes (como `BoxContainer`) que actúan como padres contenedores son componentes que definen la interfaz y estilo pero con poca o nada de lógica en si, es decir son componentes de Layout.
 
-> Aquí estado puede ser tanto estado interno de un componente personalizado o incluso estado de un elemento HTML como un input.
+`children` es la prop por defecto para definir estos componentes de `Layout` y pasar componentes para que sean renderizados, pero ¿Qué ocurre si necesitas mas "espacios" dentro de tu interfaz?
+
+Las prop pueden recibir cualquier tipo de dato, primitiva o función y un componente React es en esencia una función, entonces puedes crear una prop que reciba un componente.
+
+```javascript
+function App() {
+	return (
+		<BoxContainer>
+			<h1>Welcome</h1>
+			<Dashboard
+				navbar={<DashboardNavBar />}				footer={<DashboardFooter />}
+			>
+				<DashboardContent />
+			</Dashboard>
+		</BoxContainer>
+	)
+}
+```
+
+En este ejemplo el componente `Dashboard` recibe dos nuevas props `navbar` y `footer` que aceptan un componente cada una. Si miramos dentro del componente podremos tener algo así.
+
+```javascript
+function Dashboard({ navbar, footer, children }) {
+	return (
+		<div className="dashboard-container">
+			<nav className="dashboard-nav">
+				{navbar}
+			</nav>
+			<h1>This is the Dashboard</h1>
+			<div className="dashboard-content">
+				{children}
+			</div>
+			{footer}
+		</div>
+	)
+}
+```
+
+Como resultado tenemos un componente que se encarga de renderizar las “piezas” de tu interfaz permitiéndote cambiar esas piezas como más adecuado sea.
+
+Este proceso de composición es nativo a React y puede ser realmente poderoso permitiendo por ejemplo:
+
+- Especialización: A veces tienes componentes genéricos y un componente casí idéntico pero que aplica a un caso de uso particular o especial. En este caso simplemente aceptas diferentes props en el componente genérico y creas un componente especial que define esas props.
+- Manejo de estado: Si bien aún no hemos hablado de que es el estado dentro de tu aplicación, es bueno saber que este patrón de utilizar las props para pasar datos y componer componentes complejos es la forma “natural” de React de manejar y manipular el estado.
 
 ## 🐾 Primeros Pasos
 
-En esta lección trabajaremos renderizando múltples elementos de forma “automática”. Para ello construiremos una lista de elementos basados en un arreglo de strings.
+En esta lección trabajarás en conocer un concepto base de React y el modelo de componentes: Composición.
+
+Para eso crearás algunos componentes base con los que “compondrás” una interfaz más compleja.
 
 ## 🎯 Objetivos
 
-- Conocer como renderizar múltiples elementos utilizando interpolación y `Array.map`
-- Comprender que hace la prop `key` y por que es necesaria.
+- Conocer como pasar datos y componentes utilizando props y la prop `children`.
+- Conocer y utilizar las props para pasar componentes.
+- Utilizar composición como el patrón base para manipular datos y la interfaz.
 
 ## 🏋️‍♂️ Ejercicios
 
-1. Renderiza manualmente una lista de elementos.
-2. Utiliza `Array.map` para crear una lista de elementos basado en un arreglo de strings.
-3. Agrega la prop `key` faltante utilizando un valor único.
+- [ ] TODO
 
 ## 💸 Crédito Extra
 
-- [ ] TODO DEMO de cambios de estado al no usar `key`.
+- [ ] TODO
