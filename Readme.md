@@ -1,4 +1,4 @@
-# 🎉 Welcome
+# 🎉 Bienvenido 
 
 ## 🚌 React desde cero: un viaje por los fundamentos de React
 
@@ -10,23 +10,15 @@ En este workshop aprenderás los diferentes conceptos base que fundamentan el c�
 
 Ok. ¿listo y ansioso de aprender?, genial, este será un viaje divertido y lleno de desafíos. Algunas de las cosas que podrás aprender serán:
 
+- Pensando en React
 - Como configurar una app React desde cero y de forma estática.
 - ¿Por que usamos JSX?
 - ¿Qué es un componente? y como pensar en términos de componentes.
-- Como crear componentes utilizando React y JSX
-- Tooling: npm, eslint, prettier
-- Como utilizar React en una aplicación production-ready con create-react-app
+- Como crear componentes utilizando React y JSX.
 - Cómo manejar estilos en tu aplicación.
-- Cómo renderizar listas de datos
+- Cómo renderizar listas de datos y que es la prop key.
 - Cómo manejar formularios y eventos mendiante manipulación del estado.
-- Cómo crear efectos para manejar datos externos
-- Cómo trabajar con datos y acciones asíncronas.
 
-..
-
-...
-
-...
 
 ## 👨🏻‍💻¿Quién soy?
 
@@ -42,20 +34,20 @@ Puedes encontrarme en twitter como [@matiasfha](https://twitter.com/matiasfha)
 
 ¿Que necesitas saber para iniciar tu camino con React?
 
-Primero, y por sobre todo, necesitas conocer conceptos fundamentales sobre desarrollo web y sobre todo tener conocimientos sobre Javascript avanzado. Durante tu trabajo con React verás mucho ideas y conceptos como:
+Primero, y por sobre todo, necesitas conocer conceptos fundamentales sobre desarrollo web y sobre todo tener conocimientos sobre Javascript moderno o avanzado. Durante tu trabajo con React verás mucho ideas y conceptos como:
 
-- Destructuring
-- Spread
-- Ternaries
-- Closures
-- Default parameters
-- [Arrow functions](https://escuelafrontend.com/articulos/arrow-functions)
-- [Métodos de arreglos](https://escuelafrontend.com/articulos/metodos-de-arreglos)
-- Promesas, async/await
+- Destructuring.
+- Spread.
+- Ternaries.
+- [Closures.](https://www.freecodecamp.org/espanol/news/que-es-un-closure-en-javascript/)
+- Parámetros por defecto.
+- [Arrow functions.](https://escuelafrontend.com/articulos/arrow-functions)
+- [Métodos de arreglos.](https://escuelafrontend.com/articulos/metodos-de-arreglos)
+- Promesas, async/await.
 
 Te invito a revisar tus conocimientos en esas áreas para que puedas sacar el máximo provecho a este workshop.
 
-Puedes revisar mi newsletter [Microbytes](https://microbytes.dev) y unirte al curso Javascript para React.
+Puedes revisar mi newsletter [Microbytes](https://microbytes.dev) y unirte al curso Javascript para React donde encontrarás más material al respecto.
 
 ## 📝 Sobre el workshop
 
@@ -64,6 +56,18 @@ Puedes revisar mi newsletter [Microbytes](https://microbytes.dev) y unirte al cu
 Cada concepto o contenido esta encapsulado en su propia lección y cada lección tiene su propio directorio con recursos, ejemplos de código y desafíos.
 
 En cada directorio encontrarás un nuevo archivo Readme.md, en el encontrarás una descripción de lo que encontrarás en la lección e instrucciones para llevar a cabo los ejercicios, desafíos o cuestionarios.
+
+Además encontrarás la configuración necesaria para ejecutar el proyecto que te permitirá resolver los ejercicios.
+
+### Ejemplos de Ejercicios
+
+Los ejercicios consisten en el desarrollo y solución de una problemática asociada al concepto que estás aprendiendo en la lección. Esto implica, que el código tendrá pistas y guías para que te mantengas enfocado en el tema correspondiente.
+
+Para esto encontrás comentarios y emojis que te ayudarán en el camino.
+
+- 💡: Indica el contenido del ejercicio.
+- 🏋️‍♂️: Indica el ejercicio en particular.
+- 🍬: Desafío o crédito extra.
 
 ### Listado de lecciones
 
@@ -76,3 +80,6 @@ En cada directorio encontrarás un nuevo archivo Readme.md, en el encontrarás u
 - [06 - Arrays](./lesson06/Readme.md)
 - [07 - Composición](./lesson07/Readme.md)
 - [08 - Estilos](./lesson08/Readme.md)
+- [09 - Estilos](./lesson08/Readme.md)
+- [10 - Estilos](./lesson08/Readme.md)
+- [11 - Estilos](./lesson08/Readme.md)
