@@ -18,8 +18,7 @@ Para escribir lo mismo en JSX y pasar estos valores llamados props, simplemente 
 <Title color="red">Este es el Titulo</Title>
 ```
 
-En este ejemplo `color=“red”` define una **prop** llamada `color` con el valor string `red`.
-
+En este ejemplo `color=“red”` define una **prop** llamada `color` con el valor string `red`
 ¿Cómo se reciben las props en un componente?
 
 Cuando definimos un componente, en realidad estamos creando una función que retorna JSX, para que esta función sea considerada un componente React valido debe aceptar solo un argumento, este único argumento es el que llamamos **props**.
@@ -51,7 +50,11 @@ const Title = (props) => {
 ↓	↓	↓	↓	↓	↓	↓	↓	↓	↓	↓	↓
 
 const Title = (props) => {
-	const { color, children } = props
+	const { color, childrn } = props
+	return React.createElement('h1',null, children, " _ ", color)
+}
+↓	↓	↓	↓	↓	↓	↓	↓	↓	↓	↓	↓
+const Title = ({ color, children })=> {
 	return React.createElement('h1',null, children, " _ ", color)
 }
 ```

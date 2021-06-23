@@ -24,6 +24,8 @@ Pero las cosas se complican cuando alguno de los elementos del arreglo es un com
 
 > Aquí estado puede ser tanto estado interno de un componente personalizado o incluso estado de un elemento HTML como un input.
 
+Puedes profundizar más sobre como funciona la prop `key` revisando el siguiente artículo en Escuela Frontend: [¿Cómo funciona la prop key en React?](https://escuelafrontend.com/articulos/como-funciona-la-prop-key-en-react)
+
 ## 🐾 Primeros Pasos
 
 En esta lección trabajaremos renderizando múltples elementos de forma “automática”. Para ello construiremos una lista de elementos basados en un arreglo de strings.
@@ -41,7 +43,8 @@ En esta lección trabajaremos renderizando múltples elementos de forma “autom
 
 ## 💸 Crédito Extra
 
-- [ ] TODO DEMO de cambios de estado al no usar `key`.
+- Revisa el siguiente demo sobre como funciona la prop `key`. ¿Cuál es el problema al eliminar elementos?. ¿Cómo el uso de la prop `key`afecta el funcionamiento del demo?
+[https://codesandbox.io/s/react-array-keys-qmwwk?from-embed=&file=/src/App.js](https://codesandbox.io/s/react-array-keys-qmwwk?from-embed=&file=/src/App.js)
 
 ## 📣 Feedback
 Por favor completa [este formulario](https://docs.google.com/forms/d/e/1FAIpQLSfVXaAKvJ7aj_de08YTet3g4Go5FV7QrI9TJWkYI1UDg1KW6A/viewform?usp=pp_url&entry.1045988887=Lección%2008)

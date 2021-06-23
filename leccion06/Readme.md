@@ -23,7 +23,7 @@ Para esto definiremos el siguiente ejemplo.
 
 ## 🎯 Objetivos
 
-- Conocer los 2 métodos de renderizar componentes de forma condicional.
+- Conocer los 2 métodos para renderizar componentes de forma condicional.
 - Conocer las limitaciones y resultados de cada método.
 - Reconocer por que no se puede utilizar un bloque condicional `if`
 - Ejercitar interpolación

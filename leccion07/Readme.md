@@ -101,11 +101,12 @@ Para eso crearás algunos componentes base con los que “compondrás” una int
 
 ## 🏋️‍♂️ Ejercicios
 
-- [ ] TODO
-
+- Define que props debe utilizar el componente `Page` para poder renderizar las distintas partes de la página
+- Utiliza interpolación para renderizar los diferentes componentes hijos
+ 
 ## 💸 Crédito Extra
 
-- [ ] TODO
+- Declara props en los componentes hijos: `PageBody` y `Footer`. Define estas props en el componente `App`. ¿Cómo puedes pasar estas props para ser renderizadas?
 
 ## 📣 Feedback
 Por favor completa [este formulario](https://docs.google.com/forms/d/e/1FAIpQLSfVXaAKvJ7aj_de08YTet3g4Go5FV7QrI9TJWkYI1UDg1KW6A/viewform?usp=pp_url&entry.1045988887=Lección%2007)
