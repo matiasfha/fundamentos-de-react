@@ -3,7 +3,7 @@ const { readdirSync, fstat, statSync } = require('fs')
 const path = require('path')
 const prompts = require('prompts')
 const getLessons = () => {
-    return readdirSync(path.resolve(__dirname)).filter(path => statSync(path).isDirectory()).filter(d => d.includes('lesson'))
+    return readdirSync(path.resolve(__dirname)).filter(path => statSync(path).isDirectory()).filter(d => d.includes('leccion'))
 }
 
 const main = async () => {
