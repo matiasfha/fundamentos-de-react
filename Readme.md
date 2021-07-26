@@ -49,6 +49,20 @@ Te invito a revisar tus conocimientos en esas áreas para que puedas sacar el m�
 
 Puedes revisar mi newsletter [Microbytes](https://microbytes.dev) y unirte al curso Javascript para React donde encontrarás más material al respecto.
 
+### 🛠 Requerimientos
+Para aprovechar al máximo nuestro tiempo durante el workshop, por favor realiza los siguientes pasos antes de iniciar:
+- [ ] Configura el proyecto: Clona este repositorio y ejecuta `npm install`
+- [ ] Instala Zoom para unirte a la video llamada
+- [ ] Ten listo tu editor de código favorito para resolver los ejercicios
+
+
+### ❓ ¿Cómo ejecutar las lecciones?
+
+Cada lección "vive" dentro de su propio directorio dentro de este monorepo, para ejecutar el ejercicio de una lección en particular sólo debes, desde la terminal, ejecutar `npm run dev`. Esto te mostrará una lista de las lecciones donde podrás seleccionar utilizando el teclado.
+
+
+
+
 ## 📝 Sobre el workshop
 
 ### Estructura de las lecciones
