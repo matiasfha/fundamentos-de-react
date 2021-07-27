@@ -1,0 +1,24 @@
+{
+  "projectName": "react-fundamentals",
+  "projectOwner": "matiasfha",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "eslint",
+  "contributors": [
+    {
+      "login": "horacioh",
+      "name": "Horacio Herrera",
+      "avatar_url": "https://avatars.githubusercontent.com/u/725120?v=4",
+      "profile": "http://horacioh.com/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
