@@ -31,7 +31,7 @@
     <!-- 💡 Aquí será donde escribamos nuestros scripts -->
     
     <script type="text/javascript">
-    // 💡 object que representa un usuario
+    // 💡 objeto que representa un usuario -  datos de ejemplo
     const usuarioWithContacts = {
         name: 'User 1',
         contacts: [
@@ -75,8 +75,8 @@
     }
 
     function RenderUsersWithTernary(props) {
-        {/+ 🏋️‍♂️ Utuliza un operador ternario para renderizar los componentes */}
-        {/* <Contacts contacts={props.users.contacts /> y <NoContacts /> */}
+        /* 🏋️‍♂️ 1. Utiliza un operador ternario para renderizar los componentes
+        <Contacts contacts={props.users.contacts /> y <NoContacts /> */
         return (
            <div>
                 <h3>{props.user.name}</h3>
@@ -86,8 +86,8 @@
     }
     
     function RenderUsersWithLogic(props) {
-        {/+ 🏋️‍♂️ Utuliza el operador lógico && para renderizar los componentes */}
-        {/* <Contacts contacts={props.users.contacts /> y <NoContacts /> */}
+        /* 🏋️‍♂️ Utuliza el operador lógico && para renderizar los componentes 
+        <Contacts contacts={props.users.contacts /> y <NoContacts /> */
         return (
            <div>
                 <h3>{props.user.name}</h3>

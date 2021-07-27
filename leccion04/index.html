@@ -5,10 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curso: React desde cero - Lección 04</title>
-    <!-- 💡Aquí es donde debes agregar los archivos de React -->
+    <!-- 💡 Estos son los archivos de React -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-    <!-- Add abbel -->    
+    <!-- Deberás agregar Babel -->    
     <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>-->
 </head>
 <body>
@@ -16,13 +16,16 @@
     
     <!-- 💡 Aquí será donde escribamos nuestros scripts -->
     
-    <script type="text/javascript">
+    <script type="module">
+    // Para que JSX pueda ser interpretado por Babel y finalmente ejecutado en el navegador
+    // tendrás que cambiar el `type="module"` por `type="text/babel"`
+
     // 💡 Este es el código que debes implementar utilizando JSX
-    const h1 = React.createElement('h1',{},"Hola Mundo!")
+    const h1 = React.createElement('h1',{
+        className: "title"
+    },"Hola Mundo!")
 
-    // 💡 Crea un componente React, usando JSX recuerda que debes usar Mayusculas
-    // const Component = React.createElement('Componente', null, h1)        
-
+    
     const root = document.getElementById('root')
     ReactDOM.render(h1, root)
 

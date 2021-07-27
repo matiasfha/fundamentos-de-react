@@ -4,21 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso: React desde cero - Leccion 09</title>
-    <!-- 💡Aquí es donde debes agregar los archivos de React -->
+    <title>Curso: React desde cero - Leccion 10</title>
+    <!-- 💡 Estos son los archivos de React y Babel -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <div id="root"></div>
-    <!-- 💡 Aquí será donde escribamos nuestros scripts -->    
+    <!-- 💡 Aquí será donde escribamos nuestros scripts -->
+    
     <script type="text/babel">
         const root = document.getElementById('root')
         const options = ['Option 1', 'Option 2','Option 3']
         const App = () => {
 
-          /* 🚨  🏋️‍♂️ 2. Aquí define el comportamiento de la funcion onSelectChange. 
+          /* 💡 Aquí define el comportamiento de la funcion onSelectChange. 
             Esta funcion solo mostrará el valor seleccionado por consola o en un alert
             El evento es un objeto con varios atributos uno de ellos es `target` que a su vez 
             es un objeto que contiene el valor en el atributo `value`
@@ -27,7 +28,7 @@
             
           }
 
-          /* 🚨  🏋️‍♂️ 3. Aquí define el manejador de eventos para el input
+          /* 💡 Aquí define el manejador de eventos para el input
           Muestra en consola el valor capturado
             */ 
           const onInputChange = (event) => {
@@ -35,7 +36,7 @@
           }
 
 
-          /* 🚨. 💸  4. Crédito Extra: Define la funcion onClickButton que será pasada como prop 
+          /* 🍬  4. Crédito Extra: Define la funcion onClickButton que será pasada como prop 
           a tu componente Button
             */ 
           const onClickButton = (event) => {
@@ -59,7 +60,7 @@
 
               <input type="text" placeholder="Escribe algo"/>
 
-            {/*💸 4. Crea y Renderiza un componente Button que acepta una prop llamada onClick */}                            
+            {/*💡 4. Crea y Renderiza un componente Button que acepta una prop llamada onClick */}                            
               
             </div>
           )

@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curso: React desde cero - Lección 05</title>
-    <!-- 💡Aquí es donde debes agregar los archivos de React -->
+    <!-- 💡 Estos son los archivos de React y Babel -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -24,16 +24,18 @@
 
     }
 
+    // Este es el component padre que deberá contener al componente UserInfo
     const ParentComponent = ()=> {
         const nombre = 'User'
         const email = 'user@email.com'
         const telefono = '123344556'
-        // 🏋️‍♂️ ¿Que debe retornar este elemento padre?
+        // 🏋️‍♂️ ¿Que debe retornar este componente padre?
         return 
     }
 
     const root = document.getElementById('root')
-    ReactDOM.render(Component, root)
+    // Renderiza el componente padre
+    ReactDOM.render(ParentComponent, root)
 
     </script>
 

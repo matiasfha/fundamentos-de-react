@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso: React desde cero - Leccion 07</title>
-    <!-- 💡Aquí es donde debes agregar los archivos de React -->
+    <title>Curso: React desde cero - Leccion 08 </title>
+    <!-- 💡 Estos son los archivos de React y Babel -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -16,12 +16,30 @@
     <!-- 💡 Aquí será donde escribamos nuestros scripts -->
     
     <script type="text/javascript">
+    /* 🏋️‍♂️ 1. Crea un componente que renderice una lista de elementos
+    Define manualmente cada uno de los elementos de la list */
+    const ManualList = ()=> {
+        return (
+            <ul>
+            </ul>
+        )
+    }
 
-    // 💡 Crea un componente React, usando JSX que reciba props 
-    // const Component = React.createElement('Componente', null, h1)        
+    /* 🏋️‍♂️  2. Utiliza `Array.map` para crear una lista de elementos basado
+     en un arreglo de strings
+     🏋️‍♂️ 3. Agrega la prop key utilizando un valor único.
+    */
+   const MapList = () => {
+       const strings = ['string 1', 'string 2', 'string 3']
+       return (
+           <ul></ul>
+       )
+   }
+
 
     const root = document.getElementById('root')
-    ReactDOM.render(h1, root)
+    // Cambia ElementoARenderizar por tu Componente
+    ReactDOM.render(ElementoARenderizar, root)
 
     </script>
 

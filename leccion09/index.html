@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso: React desde cero - Leccion 08</title>
-    <!-- 💡Aquí es donde debes agregar los archivos de React -->
+    <title>Curso: React desde cero - Leccion 09</title>
+    <!-- 💡 Estos son los archivos de React y Babel -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -40,11 +40,14 @@
     
     <!-- 💡 Aquí será donde escribamos nuestros scripts -->
     
+
     <script type="text/babel">
         const root = document.querySelector('#root')
-        // 💡 Crea un componente React que renderizará una lista. 
-        // El componente debe recibir y renderizar la prop children
-        // el componente recibirá la clase css `list`
+        /* 🏋️‍♂️ 1. Renderiza una lista de elementos.
+         El contenedor de la lista debe utiliza la clase `list` 
+         y los elementos de la lista deben usar estilo en linea. 
+         Por ejemplo para definir el tamaño de la fuente.
+         */
         /*
         const Ul = ({ children}) => {
             return <ul 🚨 aqui debe ir la prop para definir la clase css>
@@ -52,9 +55,14 @@
             </ul>
         }
         */
-        // 💡 Crea un componente Item que recibirá la prop children
-        // 🏋️‍♂️ 1. este componente aplicara `inline style` para definir el estilo que require
-        // 🏋️‍♂️ 2. Agrega una nueva prop para recibir los estilos
+
+
+        /* 🏋️‍♂️ 2. Define un componente que use una prop para recibir el estilo en linea de cada Item.ç
+         la definición del estilo en linea deberá hacerse fuera del componente Item.
+         
+        💡 - Este componente aplicara `inline style` para definir el estilo que require
+        💡 - Agrega una nueva prop para recibir los estilos
+        */
     
         /*
         const Item = ({ children }) => {
@@ -64,12 +72,13 @@
          }
          */
 
-        // 💡 Este es el componente que renderiza la lista de items
-        // acepta una prop llamada items que recibe un array de strings
-        // debes renderizar estos elementos utilizando el componente Item     
-        // 🏋️‍♂️ 2. Debes pasar los estilos en linea como una prop al componente Item
-        // 🏋️‍♂️ 3. Define un arreglo de tamaños. Utiliza este arreglo junto al indice generado por Array.map para 
-        // que cada elemento renderizado tenga tamaños de fuente diferente. 
+         /*
+         🏋️‍♂️ 3. Define el uso de diferentes tamaños de fuente para cada item renderizado. 
+         Para esto tendrás que crear un arreglo con los valores que quieres usar
+          y luego utilizar `Array.map` para acceder a cada tamaño 
+          en el momento de renderizar cada elemento.
+          💡  - Debes pasar los estilos en linea como una prop al componente Item
+        */
         const List = ({ items}) => {
             /*
             🏋️‍♂️ 3. Arreglo de tamaños
@@ -82,8 +91,9 @@
         }
 
         const data = ['Primer Item',<strong>Segundo Item</strong>, <em>Tercer Item</em>]
+  
         const App = () => {
-        return <List items={data}/>
+          return <List items={data}/>
         }
         ReactDOM.render(<App />, root)
     </script>

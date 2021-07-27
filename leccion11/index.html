@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso: React desde cero - Leccion 10</title>
-    <!-- 💡Aquí es donde debes agregar los archivos de React -->
+    <title>Curso: React desde cero - Leccion 11</title>
+    <!-- 💡 Estos son los archivos de React y Babel -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -26,13 +26,13 @@
             const [ inputState, setInputState ] = React.useState('')
             const [ selectState, setSelectStat ] = React.useState('')
 
-            /* 🏋️‍♂️ define lo que hará el manejador de eventos del input */
+            /* 💡 define lo que hará el manejador de eventos del input */
             const handleInput =(event) => {
             }
-            /* 🏋️‍♂️ define lo que hará el manejador de eventos del select */
+            /* 💡 define lo que hará el manejador de eventos del select */
             const handleSelect = (event) => {
             }
-
+            /* 🏋️‍♂️ 3. Actualiza el método `onSubmit` para que no refresque la página. */
             const onSubmit = (event) => {
               // 🚨 No olvides que la acción por defecto de enviar un formulario es recargar la página
               // en este caso quieres prevenir que eso ocurra usando preventDefault()
@@ -44,11 +44,14 @@
               })
               // 🤯 Aquí es donde realizarás la petición a una api externa para almanacenar los datos obtenidos del estado
             }
+
+            
             return (
               <div>  
-                {/* 🏋️‍♂️ Este formulario debe recibir una prop en el evento ´onSubmit` */}
+                {/* 🏋️‍♂️ 1. Define el evento `onSubmit` */}
                 <form>
-                  {/* 🏋️‍♂️ Este input debe recibir dos props extras. El manejador de eventos y el valor actual del estado asociado */}
+                  {/* 🏋️‍♂️ 1. Define los manejadores de eventos para este input y el select 
+                  Este input debe recibir dos props extras. El manejador de eventos y el valor actual del estado asociado */}
                   <input type="text" />
                   {/* 🏋️‍♂️ Este select debe recibir dos props extras. El manejador de eventos y el valor actual del estado asociado */}
                   <select>

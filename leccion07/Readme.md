@@ -101,8 +101,8 @@ Para eso crearás algunos componentes base con los que “compondrás” una int
 
 ## 🏋️‍♂️ Ejercicios
 
-- Define que props debe utilizar el componente `Page` para poder renderizar las distintas partes de la página
-- Utiliza interpolación para renderizar los diferentes componentes hijos
+- 1. Define que props debe utilizar el componente `Page` para poder renderizar las distintas partes de la página
+- 2. Utiliza interpolación para renderizar los diferentes componentes hijos
  
 ## 💸 Crédito Extra
 

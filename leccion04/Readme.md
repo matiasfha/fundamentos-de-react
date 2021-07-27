@@ -34,15 +34,6 @@ Además tenemos que realizar una pequeña modificación extra, en el tag `<scrip
 
 Para este ejercicio crearás un elemento `h1` utilizando JSX y lo desplegarás en la página principal.
 
-2. Crear un componente React
-
-Ahora usaremos la misma sintaxis JSX para crear un componente React.
-
-Tip: Recuerda nombrarlo con mayúsculas
-
-3. Crear elementos anidados.
-
-En este caso tendrás que utilizar `JSX` para crear un grupo de componentes anidados.
 
 ## 🍬 Crédito Extra
 

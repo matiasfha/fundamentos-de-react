@@ -12,6 +12,12 @@ Para poder renderizar una lista debemos iterar sobre ella y como ya revisamos en
 
 Un componente React acepta arreglos de valores o componentes en su prop `children` por lo que podemos transformar los elementos de arreglo en un nuevo componente o simplemente renderizar el arreglo directamente.
 
+```jsx
+const ui = (
+    arreglo.map(item => <span>item</span>)
+)
+```
+
 Una vez que tenemos el arreglo renderizado podemos ver que React nos avisa de un problema: Nos falta definir una prop llamad a `key` en nuestros compoenntes.
 
 Esta prop debe recibir un valor único e invariable. Esto es simple de resolver en un caso donde el arreglo de datos utilizado es fijo y no cambia en el tiempo, podemos resolver este problema simplemente utilizando un valor como el indice del elemento en el arreglo. ¿Pero que ocurre si el arreglo de datos cambia en el tiempo?
@@ -25,6 +31,8 @@ Pero las cosas se complican cuando alguno de los elementos del arreglo es un com
 > Aquí estado puede ser tanto estado interno de un componente personalizado o incluso estado de un elemento HTML como un input.
 
 Puedes profundizar más sobre como funciona la prop `key` revisando el siguiente artículo en Escuela Frontend: [¿Cómo funciona la prop key en React?](https://escuelafrontend.com/articulos/como-funciona-la-prop-key-en-react)
+
+
 
 ## 🐾 Primeros Pasos
 

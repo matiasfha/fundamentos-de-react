@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso: React desde cero - Lección 03</title>
+    <!-- 💡 Estos son los archivos de React -->
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <!--💡  Este div actuará como "base" para renderizar nuestros elementos -->
+    <div id="root1"></div>
+    
+    <!--💡  Este div actuará como "base" para renderizar nuestros elementos con React -->
+    <div id="root2"></div>
+    <!-- 💡 Aquí será donde escribamos nuestros scripts -->
+    
+    <script type="text/javascript">
+    /* 🏋️‍♂️ 1. Crea elementos de interfaz utilizando la api DOM de Javascript
+
+    - [ ] Crea un elemento H1.
+    - [ ] Crea una lista de al menos dos items
+    */
+    
+    const root = document.getElementById('root1')
+
+    // 💡
+    // root.appendChild()
+
+
+    /* 🏋️‍♂️ 2. Crea un elemento h1 utilizando las API de React. 
+    En React las atributos de los elementos HTML son props
+    el atributo textNode o el contenido que se renderizará dentro
+    del elemento creado es agregado utilizando la prop "children"
+    */
+    
+    /* 🏋️‍♂️ 3. Crea un elementos anidados utilizando las API de React */
+    // <h1>Hola <strong>Mundo!</strong></h1>
+    
+    /* 🍬  Utilizando `React.createElement` crea una lista de 3 elementos utilizando `ul` y `li`. */
+
+
+    // 💡Para renderizar tus componentes en la pagina debes usar ReactDOM
+    // const root2 = document.getElementById('root2')
+    // ReactDOM.render(h1, root2)
+
+
+    </script>
+
+</body>
+</html>

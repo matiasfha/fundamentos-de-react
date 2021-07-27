@@ -16,11 +16,28 @@ Antes de iniciar la primera lección en profundidad, revisemos los contenidos b�
 - Revisar que aprenderás.
 
 ## Bienvenid@
+👋 Mi nombre es Matías Hernández, padre, desarrollador, podcaster, escritor e instructor.
+
+Trabajo formalmente desde hace ya 11 años donde al menos 6 de ellos han sido principalmente dedicados a desarrollar con React.
+
+🐦 Encuentrame en twitter como [@matiasfha](https://twitter.com/matiasfha)
 
 ## ¿Qué esperar de este workshop?
+Este workshop está orientado a quienes quieren comenzar a trabajar con React o incluso para quienes llevan un tiempo trabajando ya que profundizaremos en algunos de los conceptos y modelos mentales base para entendeer cómo y por qué de algunas técnicas o métodos de uso de React.
+
+Comenzaremos desde los fundamentos revisando que es un componente y como **Pensar en React** para finalizar implementando una interfáz estática.
+
 
 ## 💸 Créditos Extra
 
 Revisemos algunos artículos que nos ayudaran a preparar los conceptos base que usaremos en el curso
 
-- [ ] (Listado de artículos sobre javascript moderno)
+- [ ] [Entiende Hoisting en Javascript con Ejemplos Prácticos](https://escuelafrontend.com/articulos/hoisting-ejemplos-practicos) - [Claudia Valdivieso](https://twitter.com/lavaldi_)
+- [ ] [Entiende el Concepto de Elevación (Hoisting) en JavaScript](https://escuelafrontend.com/articulos/hoisting-javascript) - [Horacio Herrera](https://twitter.com/hhg2288)
+- [ ] [Diferencias Entre Declaraciones de Funciones y Expresiones de Funciones](https://escuelafrontend.com/articulos/declaraciones-de-funciones-y-expresiones-de-funciones) - [Horacio Herrera](https://twitter.com/hhg2288)
+- [ ] [La guía definitiva de Métodos de Arreglos](https://escuelafrontend.com/articulos/metodos-de-arreglos) - [Matías Hernánedez](https://twitter.com/matiasfha)
+- [ ] [¿Qué es Inmutabilidad en Javascript](https://www.freecodecamp.org/espanol/news/que-es-inmutabilidad-en-javascript/) - [Matías Hernánedez](https://twitter.com/matiasfha)
+- [ ] [¿Qué es un closure en Javascript](https://www.freecodecamp.org/espanol/news/que-es-un-closure-en-javascript/) - [Matías Hernánedez](https://twitter.com/matiasfha)
+- [ ] [4 formas de eliminar elementos duplicados en un arreglo con Javascript](https://matiashernandez.dev/4-formas-de-eliminar-elementos-duplicados-en-un-arreglo-con-javascript)
+- [ ] [Arreglso de objetos en Javascript: Cómo crear y actualizar su contenido](https://matiashernandez.dev/arreglos-de-objetos-en-javascript-como-crear-y-actualizar-su-contenido)
+- [ ] [Repositorio: Javascript Moderno](https://github.com/matiasfha/modern-javascript)

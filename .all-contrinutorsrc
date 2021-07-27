@@ -1,0 +1,34 @@
+{
+    "projectName": "react-fundamentals",
+    "projectOwner": "kentcdodds",
+    "repoType": "github",
+    "files": [
+        "README.md"
+    ],
+    "imageSize": 100,
+    "commit": false,
+    "repoHost": "https://github.com",
+    "contributorsPerLine": 7,
+    "contributors": [
+        {
+            "login": "matiasfha",
+            "name": "Matías Hernández",
+            "avatar_url": "https://avatars.githubusercontent.com/u/282006?v=4",
+            "profile": "https://matiashernandez.dev",
+            "contributions": [
+                "code",
+                "doc",
+                "infra",
+             ]
+            },
+            {
+                "login": "horacioh",
+                "name": "Horacio Herrera",
+                "avatar_url": "https://avatars.githubusercontent.com/u/725120?v=4",
+                "profile": "https://horacioh.com",
+                "contributions": [
+                    "infra"
+                ]
+            },
+    ]
+}

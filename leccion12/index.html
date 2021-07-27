@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso: React desde cero - Leccion 11</title>
-    <!-- 💡Aquí es donde debes agregar los archivos de React -->
+    <title>Curso: React desde cero - Leccion 12s</title>
+    <!-- 💡 Estos son los archivos de React y Babel -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -27,10 +27,12 @@
 
             
             const onSubmit = (event) => {
+              // 🏋️‍♂️ 2. Captura los datos desde los ref utilizados.
+              
               // 🚨 No olvides que la acción por defecto de enviar un formulario es recargar la página
               // en este caso quieres prevenir que eso ocurra usando preventDefault()
               
-              // 🏋️‍♂️ tan sólo mostremos por consola los valores de los elementos de formulario.
+              // 💡tan sólo mostremos por consola los valores de los elementos de formulario.
               // Para eso debes obtener el atributo `value` de cada nodo usando el `ref` correspondiente.
 
               console.log()
@@ -38,11 +40,11 @@
             }
             return (
               <div>  
-                {/* 🏋️‍♂️ Este formulario debe recibir una prop en el evento ´onSubmit` */}
+                {/* 🏋️‍♂️  1. Define el evento `onSubmit` para el form.*/}
                 <form>
-                  {/* 🏋️‍♂️ Este input debe recibir una props extra. El ref correspondiente */}
+                  {/* 💡 Este input debe recibir una props extra. El ref correspondiente */}
                   <input type="text" />
-                  {/* 🏋️‍♂️ Este select debe recibir una props extra. El ref correspondiente */}
+                  {/* 💡 Este select debe recibir una props extra. El ref correspondiente */}
                   <select>
                     <option value="option 1">Option 1</option>
                     <option value="option 2">Option 2</option>
