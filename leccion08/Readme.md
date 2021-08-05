@@ -49,7 +49,7 @@ En esta lección trabajaremos renderizando múltples elementos de forma “autom
 2. Utiliza `Array.map` para crear una lista de elementos basado en un arreglo de strings.
 3. Agrega la prop `key` faltante utilizando un valor único.
 
-## 💸 Crédito Extra
+## 🍬 Crédito Extra
 
 - Revisa el siguiente demo sobre como funciona la prop `key`. ¿Cuál es el problema al eliminar elementos?. ¿Cómo el uso de la prop `key`afecta el funcionamiento del demo?
 [https://codesandbox.io/s/react-array-keys-qmwwk?from-embed=&file=/src/App.js](https://codesandbox.io/s/react-array-keys-qmwwk?from-embed=&file=/src/App.js)

@@ -104,7 +104,7 @@ Para eso crearás algunos componentes base con los que “compondrás” una int
 - 1. Define que props debe utilizar el componente `Page` para poder renderizar las distintas partes de la página
 - 2. Utiliza interpolación para renderizar los diferentes componentes hijos
  
-## 💸 Crédito Extra
+## 🍬 Crédito Extra
 
 - Declara props en los componentes hijos: `PageBody` y `Footer`. Define estas props en el componente `App`. ¿Cómo puedes pasar estas props para ser renderizadas?
 

@@ -58,7 +58,7 @@ Para esta lección usaremos algunos elementos que solicitan acciones de usuario 
 2. Crea un elemento `select` que al cambiar el valor seleccionado muestra una alerta con el valor.
 3. Crea un elemento input que muestra en consola lo que se escribe.
 
-## 💸 Crédito Extra
+## 🍬 Crédito Extra
 
 1. Crea un **componente** `Button` que acepta una prop `onClick`. Esta función estará definida en el componente padre.
 

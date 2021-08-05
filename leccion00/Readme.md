@@ -28,7 +28,7 @@ Este workshop está orientado a quienes quieren comenzar a trabajar con React o 
 Comenzaremos desde los fundamentos revisando que es un componente y como **Pensar en React** para finalizar implementando una interfáz estática.
 
 
-## 💸 Créditos Extra
+## 🍬 Créditos Extra
 
 Revisemos algunos artículos que nos ayudaran a preparar los conceptos base que usaremos en el curso
 

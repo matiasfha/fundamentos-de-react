@@ -33,7 +33,7 @@ Para esto definiremos el siguiente ejemplo.
 1. Renderiza el componente `<NoContacts>` sólo cuando el atributo `contacts` está vacío utilizando un operador lógico
 2. Lo mismo pero utizando el operador lógico `&&`
 
-## 💸 Crédito Extra
+## 🍬  Crédito Extra
 
 - Intenta utilizar un bloque condicional `if-else`. ¿Cuál es el resultado? ¿Por qué?
 

@@ -55,7 +55,7 @@ Para esto usaremos **componentes controlados** y definiremos una función para m
 2. Define los manejadores de eventos para el input y para el select.
 3. Actualiza el método `onSubmit` para que no refresque la página.
 
-## 💸 Crédito Extra
+## 🍬 Crédito Extra
 
 1. Agrega un nuevo input al formulario y maneja un solo estado para todos los elementos. (Tip: puede usar la prop `name` para obtener los datos).
 

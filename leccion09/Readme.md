@@ -82,7 +82,7 @@ Tu trabajo será utilizar estos estilos en tus componentes aplicando lo que hemo
 2. Define el uso de una prop para recibir el estilo en linea de cada Item. la definición del estilo en linea deberá hacerse fuera del componente Item.
 3. Define el uso de diferentes tamaños de fuente para cada item renderizado. Para esto tendrás que crear un arreglo con los valores que quieres usar y luego utilizar `Array.map` para acceder a cada tamaño en el momento de renderizar cada elemento.
 
-## 💸 Crédito Extra
+## 🍬 Crédito Extra
 
 1. Además de usar estilos en linea, utiliza la clase `item` en cada item.
 2. Permite que el componente `Item` reciba una prop para modificar la clase css base.

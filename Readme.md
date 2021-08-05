@@ -53,10 +53,57 @@ Te invito a revisar tus conocimientos en esas áreas para que puedas sacar el m�
 Puedes revisar mi newsletter [Microbytes](https://microbytes.dev) y unirte al curso Javascript para React donde encontrarás más material al respecto.
 
 ### 🛠 Requerimientos
+
 Para aprovechar al máximo nuestro tiempo durante el workshop, por favor realiza los siguientes pasos antes de iniciar:
-- [ ] Configura el proyecto: Clona este repositorio y ejecuta `npm install`
+
+#### Requerimientos del sistema
+- [git](https://git-scm.com/) v2.13 o superior
+- [NodeJS](https://nodejs.org/) `12 || 14 || 15 || 16`
+- [npm](https://www.npmjs.com/) v6 o superio
+
+Estas herramientas deben ser parte de tu sistema, para verificar puedes ejecutar en la terminal
+
+```shell
+git --version
+node --version
+npm --version
+```
+
+#### Configuración
+
+> Si gustas, puedes hacer un fork de este repositorio para poder ir "guardando" tu progreso.
+
+- [ ] Clona este repositorio, en la terminal ejecuta:
+
+```shell
+git clone https://github.com/matiasfha/workshop-react-desde-cero.git
+```
+
+- [ ] Instala las dependencias
+
+```shell
+cd workshop-react-desde-cero
+npm install
+```
+> Esto puede tardar unos minutos dependeniendo de tu conexión.
+
+Si tienes algún error durante este proceso por favor [completa un issue](https://github.com/matiasfha/workshop-react-desde-cero/issues/new) en el reposotiorio. Escribe en el toda la información de los pasos realizados y el resultado del script que ejecutaste
+
+#### Ejecutando los ejercicios
+
+Para ejecutar los ejercicios, una vez que tienes los pasos anteriores listos, solo debes abrir la terminal y ejecutar
+
+```shell
+npm run dev
+```
+
+Esto te mostrará una lista de opciones con el nombre de la lección. Selecciona la que corresponda y luego visita `http://localhost:3000` en tu navegador.
+
+> Para terminar el proceso y cambiar de lección solo presiona CTRL-C, esto detendrá el script y podras ejecutarlo nuevamente
+
 - [ ] Instala Zoom para unirte a la video llamada
 - [ ] Ten listo tu editor de código favorito para resolver los ejercicios
+
 
 
 ### ❓ ¿Cómo ejecutar las lecciones?

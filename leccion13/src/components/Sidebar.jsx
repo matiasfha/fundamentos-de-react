@@ -1,5 +1,6 @@
 import React from "react";
 
+/* 💡 Este es un arreglo de items para renderizar los elementos del menu */
 const items = [
     {
         icon: (
@@ -65,6 +66,8 @@ const items = [
         text: "Más opciones",
     },
 ];
+
+/* 💡 Componente principal para renderizar la barra lateral del menu */
 const Sidebar = () => {
     return (
         <header className="h-screen flex justify-end">
@@ -76,21 +79,21 @@ const Sidebar = () => {
                         </g>
                     </svg>
                 </li>
-                {items.map((item) => {
-                    return (
-                        <li
-                            key={item.text}
-                            className="h-11 p-2.5 font-bold text-xl leading-5 mx-5 my-4 flex flex-cols text-white hover:text-dodger-blue cursor-pointer"
-                        >
-                            <div className="">{item.icon}</div>
-                            <span className="text-left ml-5 mt-1">{item.text}</span>
-                        </li>
-                    );
-                })}
+                {/* 🏋️‍♂️ 1. Esto es parte del layout. Debes renderizar la lista de menu. Esta lista proviene del arreglo `items` */}
+                {/* El componente a renderizar es un li. No olivdes utilizar la prop `key`
+                            <li
+                                className="h-11 p-2.5 font-bold text-xl leading-5 mx-5 my-4 flex flex-cols text-white hover:text-dodger-blue cursor-pointer"
+                            >
+                                <div>{item.icon}</div>
+                                <span className="text-left ml-5 mt-1">{item.text}</span>
+                            </li>
+            
+                */}
+                
                 <li className="h-13 p-2.5 font-bold text-xl leading-5 mx-5 text-left">
                     <button className="bg-dodger-blue  rounded-full py-3 px-6 h-12 w-56  text-white">
                         Twittear
-          </button>
+                    </button>
                 </li>
             </ul>
         </header>

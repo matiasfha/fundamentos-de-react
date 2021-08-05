@@ -58,7 +58,7 @@ Para esto usaremos **componentes no-controlados** y definiremos una función par
 1. Define el evento `onSubmit` para el form.
 2. Captura los datos desde los ref utilizados.
 
-## 💸 Crédito Extra
+## 🍬  Crédito Extra
 
 - [ ] TODO
 

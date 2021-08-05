@@ -1,18 +1,22 @@
 import React from 'react';
 import { Image, Gif, Poll, Emoticon, Schedule } from '../assets/ToolbarImages';
+/* 💡 Este componente es el que se encarga de renderizar la lista de Tweets */
 import TweetList from './TweetList'
+/* 💡 Este es un arreglo de tweets que se renderizarán. */
 import data from '../tweet.json'
 
+// 💡 Esta es una lista de imagenes (Estas imagenes son componentes React). El componente Toolbar debe renderizarlas.
+// no olvides utilizar la prop `key`.
+// Este componente Toolbar define 
 const images = [Image, Gif, Poll, Emoticon, Schedule]
 const Toolbar = () => {
     return (
         <div className="tools-content">
-            {images.map((Item, index) => {
-                return <Item key={index} />
-            })}
+            {/* 💡 Aqui debes renderizar las imagenes */}
         </div>
     )
 }
+
 const Header = () => {
     return (
         <div className="header">
@@ -21,57 +25,52 @@ const Header = () => {
     )
 }
 
-const TweetForm = ({ onSubmit }) => {
-    const [content, setContent] = React.useState('')
 
+// 🏋️‍♂️ 2. Crea el componente formulario para capturar información del usuario
+// Puedes utilizar componentes controlados o no controlados
+// 💡 Si usas componentes controlados recuerda usarás el hook React.useState('')
+// 💡 Si usas componentes NO-controlados recuerda usarás el hook React.useRef()
+// Encuentra más información [en este post](https://escuelafrontend.com/articulos/las-diferencias-entre-componentes-controlados-y-no-controlados-en-react)
+
+const TweetForm = () => {
+    // Define aquí el hook que usarás
+
+    // 💡 Esta es la función que se ejecutará al presionar el boton "Twittear"
+    // Esta función debe ejecutar la prop `onSubmit` que el formulario recibe
     const submit = (event) => {
-        event.preventDefault()
-        if (content !== '') {
-            onSubmit(content)
-        }
-
+       
     }
 
-    const updateValue = (event) => {
-        setContent(event.currentTarget.value)
-    }
+    // 💡 Si estás utilizando componentes controlados no olvides que
+    // necesitas una función que te permita actualizar el estado del input/textarea 
+    /*const updateValue = (event) => {
+        
+    }*/
     return (
-        <form className="tweet-form" onSubmit={submit}>
+        <form className="tweet-form" >
             <img src="" className="avatar" />
             <div className="container">
-                <textarea placeholder="¿Qué está pasando?" rows={1} onChange={updateValue} />
+                {/* 💡 Aqui debes agregar el elemento textarea para capturar el texto del usuario */}
                 <div className="tools">
                     <Toolbar />
-                    <button type="submit">Twittear</button>
+                    {/* 💡 Aqui debes renderizar el botón para "Twittear" */}
                 </div>
             </div>
         </form>
     )
 }
 
+
+/* 💡 Este es el componente principal que renderizará los componentes previamente definidos
+Este componente es quien recibirá la lista de datos */
 const Main = () => {
-    const [tweets, setTweets] = React.useState(data)
-    const user = {
-        avatar: 'https://pbs.twimg.com/profile_images/735242324293210112/H8YfgQHP_400x400.jpg',
-        author: 'Egghead',
-        tag: 'eggheadio',
-    }
-    const onSubmit = (tweet) => {
-        const newTweet = {
-            content: tweet,
-            date: new Date(Date.now()).toLocaleString(),
-            id: Date.now(),
-            ...user
-        }
-        setTweets(prevTweets => {
-            return [newTweet, ...prevTweets]
-        })
-    }
+    /* 🍬 Necesitas capturar los datos en un estado para poder actualizar su contenido
+    y debes compartir este estado con el componente "TweetList" */
+    
     return (
         <main className="main">
             <Header />
-            <TweetForm onSubmit={onSubmit} />
-            <TweetList tweets={tweets} />
+            {/* 💡 Aqui debes renderizar el componente TweetForm y TweetList. */}
         </main>
     )
 }
