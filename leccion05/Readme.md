@@ -73,7 +73,7 @@ Para esto crearemos componentes que se comunicaran entre ellos mediante el uso d
 ## 🏋️‍♂️ Ejercicios
 
 1 Crea un componente que mostrará la información de un usuario. El componente debe recibir como props los datos del usuario (nombre, email y telefono).
-1. Crea un componente padre que pase los datos del usuario como props al componente anterior.
+2. Crea un componente padre que pase los datos del usuario como props al componente anterior.
 
 ## 🍬 Crédito Extra
 

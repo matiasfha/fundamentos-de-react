@@ -2,6 +2,9 @@
 
 Hay muchas formas de utilizar React para nuestros desarrollos, la forma más simple y básica de hacerlo es simplemente utilizando archivos estáticos, tus viejos amigos HTML, CSS y Javascript.
 
+> Revisa otras formas de crear una aplicación React [en este artículo](https://escuelafrontend.com/articulos/como-crear-una-aplicacion-en-react) para Escuela Frontend
+
+
 Para crear una aplicación React en realidad necesitas dos librerías. React, que es la librería que se encarga de manejar el DOM virtual, interpretar tus componentes y manejar el estado y luego una librería que se encargue de traducir todo eso al “lenguaje” del dispositivo que estás usando, en el caso del browser hablamos de ReactDOM.
 
 ReactDOM es la librería responsable de comunicarse con las API del DOM y renderizar los elementos en tu pantalla.
@@ -23,7 +26,7 @@ Para esta lección veremos como crear una aplicación estática con React desde 
 
 Como puedes notar, el directorio para esta lección corresponde sólo a algunos archivos de configuración, y eso es intencional pues será en este ejercicio que crearemos nuestros primeros archivos.
 
-Crea un archivo base `index.html` en el directorio `src`.
+Crea un archivo base `index.html` en el directorio raiz.
 
 2. Agregar React utilizando unpkg
 
@@ -45,6 +48,7 @@ Tip: El snippet de código que necesitas es
 Debes revisar que al cargar el archivo html React esté disponible en el scope global. Tip: utiliza las DevTools
 
 ## 🍬 Crédito Extra
+
 - Escribe en tu archivo un simple console.log para identificar que `React` está disponible.
 
 ## 📣 Feedback

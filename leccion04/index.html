@@ -20,14 +20,24 @@
     // Para que JSX pueda ser interpretado por Babel y finalmente ejecutado en el navegador
     // tendrás que cambiar el `type="module"` por `type="text/babel"`
 
-    // 💡 Este es el código que debes implementar utilizando JSX
+    // 🏋️‍♂️ 1. Este es el código que debes implementar utilizando JSX
     const h1 = React.createElement('h1',{
         className: "title"
     },"Hola Mundo!")
 
+    // 🏋️‍♂️ 2. Este es el código que debes implementar utilizando JSX
+    const nestedH1 = React.createElement('h1',null, "Hola", " ",
+        React.createElement('strong',null, "Mundo")
+    )
     
+    // 🍬 Crédito Extra
+    // Crea una lista utilizando JSX
+
+    // 🍬 Crédito Extra 2
+    // Como puedes automatizar la creación de la lista? 
+    // 🕵️‍♀️ Pista: Array.map 
     const root = document.getElementById('root')
-    ReactDOM.render(h1, root)
+    ReactDOM.render(nestedH1, root)
 
     </script>
 

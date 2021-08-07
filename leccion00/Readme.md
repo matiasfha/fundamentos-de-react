@@ -39,5 +39,6 @@ Revisemos algunos artículos que nos ayudaran a preparar los conceptos base que 
 - [ ] [¿Qué es Inmutabilidad en Javascript](https://www.freecodecamp.org/espanol/news/que-es-inmutabilidad-en-javascript/) - [Matías Hernánedez](https://twitter.com/matiasfha)
 - [ ] [¿Qué es un closure en Javascript](https://www.freecodecamp.org/espanol/news/que-es-un-closure-en-javascript/) - [Matías Hernánedez](https://twitter.com/matiasfha)
 - [ ] [4 formas de eliminar elementos duplicados en un arreglo con Javascript](https://matiashernandez.dev/4-formas-de-eliminar-elementos-duplicados-en-un-arreglo-con-javascript)
-- [ ] [Arreglso de objetos en Javascript: Cómo crear y actualizar su contenido](https://matiashernandez.dev/arreglos-de-objetos-en-javascript-como-crear-y-actualizar-su-contenido)
+- [ ] [Arreglos de objetos en Javascript: Cómo crear y actualizar su contenido](https://matiashernandez.dev/arreglos-de-objetos-en-javascript-como-crear-y-actualizar-su-contenido)
 - [ ] [Repositorio: Javascript Moderno](https://github.com/matiasfha/modern-javascript)
+- [ ] [¿Cómo crear una aplicación en React?](https://escuelafrontend.com/articulos/como-crear-una-aplicacion-en-react)

@@ -35,10 +35,6 @@ Para esta primera lección revisaremos una interfaz conocida para encontrar los 
 
 Para hacer esto seleccionaremos una aplicación o interfaz y la dividiremos en los distintos componentes, podemos hacer esto de forma manual con lápiz y papel o utilizando alguna herramienta de dibujo.
 
-#### Recursos
-
-- [ ] Recurso 1
-- [ ] Recurso 2
 
 ### 🍬 Crédito Extra
 
