@@ -4,7 +4,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-## 🚌 React desde cero: un viaje por los fundamentos de React
+## 🚌 Fundamentos de React
 
 - Demo app:
 
@@ -102,7 +102,6 @@ Esto te mostrará una lista de opciones con el nombre de la lección. Selecciona
 
 > Para terminar el proceso y cambiar de lección solo presiona CTRL-C, esto detendrá el script y podras ejecutarlo nuevamente
 
-- [ ] Instala Zoom para unirte a la video llamada
 - [ ] Ten listo tu editor de código favorito para resolver los ejercicios
 
 
