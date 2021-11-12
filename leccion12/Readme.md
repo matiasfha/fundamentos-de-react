@@ -58,9 +58,6 @@ Para esto usaremos **componentes no-controlados** y definiremos una función par
 1. Define el evento `onSubmit` para el form.
 2. Captura los datos desde los ref utilizados.
 
-## 🍬  Crédito Extra
-
-- [ ] TODO
 
 ## 📣 Feedback
 Por favor completa [este formulario](https://docs.google.com/forms/d/e/1FAIpQLSfVXaAKvJ7aj_de08YTet3g4Go5FV7QrI9TJWkYI1UDg1KW6A/viewform?usp=pp_url&entry.1045988887=Lección%2012s)

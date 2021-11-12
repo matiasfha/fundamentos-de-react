@@ -4,6 +4,16 @@ import { Image, Gif, Poll, Emoticon, Schedule } from '../assets/ToolbarImages';
 import TweetList from './TweetList'
 /* 💡 Este es un arreglo de tweets que se renderizarán. */
 import data from '../tweet.json'
+/* 💡 Este es el contenido de un tweet, contiene los datos del usuario que crea un tweet
+será de utilidad para la funcionalidad de efectivamente twittear y mostrar el 
+contenido en la lista de tweets */
+const fakeTweet = {
+    avatar: "https://robohash.org/tweeter.png",
+    author: "Bax Jowitt",
+    tag: "bjowitt0",
+    date: "10/6/2020",   
+    id: new Date().getTime()
+}
 
 // 💡 Esta es una lista de imagenes (Estas imagenes son componentes React). El componente Toolbar debe renderizarlas.
 // no olvides utilizar la prop `key`.
