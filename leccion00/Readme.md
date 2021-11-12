@@ -31,13 +31,16 @@ Comenzaremos desde los fundamentos revisando que es un componente y como **Pensa
 ## 🍬 Créditos Extra
 
 Revisemos algunos artículos que nos ayudaran a preparar los conceptos base que usaremos en el curso
-
+- [ ] [¿Qué es Babel?](https://www.freecodecamp.org/espanol/news/que-es-babel/)  - [Matías Hernánedez](https://twitter.com/matiasfha)
+- [ ] [¿Qué es Inmutabilidad en Javascript](https://www.freecodecamp.org/espanol/news/que-es-inmutabilidad-en-javascript/)  - [Matías Hernánedez](https://twitter.com/matiasfha)
+- [ ] [¿Qué es un closure en Javascript](https://www.freecodecamp.org/espanol/news/que-es-un-closure-en-javascript/) - [Matías Hernánedez](https://twitter.com/matiasfha)
+- [ ] [Diferences Entre Valor y Referencia en Javascript](https://www.escuelafrontend.com/articulos/diferencias-valor-y-referencia-en-js) - [Claudia Valdivieso](https://twitter.com/lavaldi_)
+- [ ] [Lo que Nadie te Enseña Sobre la Igualdad en Javascript](https://www.escuelafrontend.com/articulos/nadie-te-ensena-sobre-la-igualdad-en-js) - [Horacio Herrera](https://twitter.com/hhg2288)
+- [ ] [Aprendamos Sobre los Tipos de Datos Primitivos en Javascript](https://www.escuelafrontend.com/articulos/los-tipos-primitivos-en-javascript) - [Horacio Herrera](https://twitter.com/
 - [ ] [Entiende Hoisting en Javascript con Ejemplos Prácticos](https://escuelafrontend.com/articulos/hoisting-ejemplos-practicos) - [Claudia Valdivieso](https://twitter.com/lavaldi_)
 - [ ] [Entiende el Concepto de Elevación (Hoisting) en JavaScript](https://escuelafrontend.com/articulos/hoisting-javascript) - [Horacio Herrera](https://twitter.com/hhg2288)
 - [ ] [Diferencias Entre Declaraciones de Funciones y Expresiones de Funciones](https://escuelafrontend.com/articulos/declaraciones-de-funciones-y-expresiones-de-funciones) - [Horacio Herrera](https://twitter.com/hhg2288)
 - [ ] [La guía definitiva de Métodos de Arreglos](https://escuelafrontend.com/articulos/metodos-de-arreglos) - [Matías Hernánedez](https://twitter.com/matiasfha)
-- [ ] [¿Qué es Inmutabilidad en Javascript](https://www.freecodecamp.org/espanol/news/que-es-inmutabilidad-en-javascript/) - [Matías Hernánedez](https://twitter.com/matiasfha)
-- [ ] [¿Qué es un closure en Javascript](https://www.freecodecamp.org/espanol/news/que-es-un-closure-en-javascript/) - [Matías Hernánedez](https://twitter.com/matiasfha)
 - [ ] [4 formas de eliminar elementos duplicados en un arreglo con Javascript](https://matiashernandez.dev/4-formas-de-eliminar-elementos-duplicados-en-un-arreglo-con-javascript)
 - [ ] [Arreglos de objetos en Javascript: Cómo crear y actualizar su contenido](https://matiashernandez.dev/arreglos-de-objetos-en-javascript-como-crear-y-actualizar-su-contenido)
 - [ ] [Repositorio: Javascript Moderno](https://github.com/matiasfha/modern-javascript)
