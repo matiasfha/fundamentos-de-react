@@ -26,11 +26,11 @@ Ok. ¿listo y ansioso de aprender?, genial, este será un viaje divertido y llen
 
 ## 👨🏻‍💻¿Quién soy?
 
-👋 Soy Matías Hernández, padre, desarrollador, podcaster, escritor e instructor.
+👋 Soy [Matías Hernández](https://matiashernandez.dev), padre, desarrollador, podcaster, escritor e instructor.
 
 Desde hace mucho tiempo (antes de que jQuery existiese) que escribo software y durante todos esos años el desarrollo web ha sido mi pasión. En los últimos 10 años he trabajado oficial y profesionalmente como Ingeniero de Software para diferentes proyectos. Durante esos años he recolectado muchas ideas, conceptos y conocimientos que intento destilar en diferentes formatos para ayudar a otros desarrolladores a mejorar su carrera.
 
-Me encanta lo que hago y trato de traer la misma pasión a la creación de contenido por medio de cursos en egghead.io, artículos en FreeCodeCamp, mi blog, Draft.dev, Cloudinary y otras publicaciones y en mis podcasts Café con Tech y Control Remoto.
+Me encanta lo que hago y trato de traer la misma pasión a la creación de contenido por medio de cursos en [egghead.io](https://matiasfha.dev/egghead), artículos en [FreeCodeCamp](https://matiasfha.dev/fcces), [mi blog](https://matiashernandez.dev), [Cloudinary](https://mediajams.dev/author/matias-hernandez) y otras publicaciones, en mis podcasts [Café con Tech](https://www.cafecon.tech/) y [Control Remoto](https://www.controlremoto.io/) y en mis [cursos via email](https://microbytes.dev).
 
 Puedes encontrarme en twitter como [@matiasfha](https://twitter.com/matiasfha)
 
