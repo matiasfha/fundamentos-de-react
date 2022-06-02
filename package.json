@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "cross-spawn": "7.0.3",
-    "npm": "7.14.0",
+    "npm": "8.11.0",
     "prompts": "2.4.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
